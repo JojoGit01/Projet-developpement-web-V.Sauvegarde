@@ -1,0 +1,9 @@
+{
+    "name": "jojo/projet-musical-v1.2",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
