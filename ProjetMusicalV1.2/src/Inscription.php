@@ -16,6 +16,14 @@ class Inscription{
         }
         return true;
     }
+    public function checkIdentifiant($identifiant): bool {
+        $selectIdentifiant = $this->pdo->query("SELECT * FROM compteMusical WHERE identifiantC = '$identifiant'");
+        $resultIdentifiant = $selectIdentifiant->fetchAll();
+        if(!$resultIdentifiant){
+            return false;
+        }
+        return true;
+    }
 
     public function sendInscription($name, $prenom, $dateDeNaissance, $email, $identifiant, $motDePasse): void 
     {

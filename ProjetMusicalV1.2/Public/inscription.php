@@ -18,10 +18,12 @@ if(isset($_POST['ValiderI'])){
     try {
         $pdo = new Inscription(App::getPDO());
         $emailCheck = $pdo->checkEmail($email);
-        if(!$emailCheck){
+        $identifiantCheck = $pdo->checkIdentifiant($identifiant);
+        if(!$emailCheck && !$identifiantCheck){
             $pdo->sendInscription($name, $prenom, $dateDeNaissance, $email, $identifiant, $motDePasse);
         } 
         else {
+            $errorIdentifiant = "Identifiant déja utilisée !";
             $errorEmail = "Email déja utilisée !";
         }
     } catch (PDOExpression $e){
@@ -37,9 +39,9 @@ if(isset($_POST['ValiderI'])){
     <title>Inscription</title>
 </head>
 <body>
-    <?php if($emailCheck): ?>
-        <p><?= $errorEmail ?>
-    <?php endif ?>
+    <div class="error">
+        <?= $emailCheck && $identifiantCheck ? $errorEmail. "<br>" . $errorIdentifiant : ($emailCheck? $errorEmail : $errorIdentifiant) ?>
+    </div>
     <form action="" method="post">
         <div class="">
             <input type="text" name="nameI" palceholder="Entrez nom" required>

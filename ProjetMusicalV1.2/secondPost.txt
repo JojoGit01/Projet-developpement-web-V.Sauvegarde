@@ -1,0 +1,94 @@
+<?php
+require_once '../../vendor/autoload.php';
+require_once '../../useFunction/sanitizeString.php';
+use App\App;
+use App\RechercheIn;
+$pdoArtiste = new Artiste(App::getPDO(), $_GET['q'], $_GET['sort'], $_GET['p']);
+define('PER_PAGE', 20);
+$pdo = App::getPDO();
+
+$query = "SELECT * FROM artiste";
+$queryCount = "SELECT COUNT(numA) as NumberA FROM artiste";
+$params = []; $sortable = ["numA", "nomA", "prenomA", "urlPhoto", "biographie"];
+
+//Recherhce par nom
+if(!empty($_GET['q'])){
+    $query .= " WHERE nomA like :nomA";
+    $queryCont .= " WHERE nomA like :nomA";
+    $params['nomA'] = '%' . $_GET['q'] . '%';
+}
+
+
+
+// Organisation
+    if(!empty($_GET['sort']) && in_array($_GET['sort'], $sortable)){
+        $direction = $_GET['dir'] ?? 'asc';
+        if(!in_array($direction, ['asc', 'desc'])){
+            $direction = 'asc';
+        }
+        $query .= " ORDER BY " . $_GET['sort'] . " $direction";
+    }
+
+    $page = (int)($_GET['p'] ?? 1);
+    $offset = ($page -1) * PER_PAGE;
+
+    $query .= " LIMIT " . PER_PAGE . " OFFSET $offset";
+
+    $statement = $pdo->prepare($query);
+    $statement->execute($params);
+    $postsArtiste = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $statement = $pdo->prepare($queryCount);
+    $statement->execute($params);
+    $count = (int)$statement->fetch(PDO::FETCH_ASSOC)->count;
+    $pages = ceil($count / PER_PAGE);      
+
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artiste Musical</title>
+</head>
+<body>
+    <div class="rechercher">
+    <form action="">
+        <input type="text" name="q" value="<?= sanitizeString($_GET['q'] ?? null) ?>"/>
+    </form>
+    </div>
+    <div class="table-artiste">
+        <table>
+            <thead>
+                <tr>
+                    <th><?= RechercheIn::sort('numA', 'Numéro artiste', $_GET) ?></th>
+                    <th><?= RechercheIn::sort('nomA', 'Nom artiste', $_GET) ?></th>
+                    <th><?= RechercheIn::sort('prenomA', 'Prénom artiste', $_GET) ?></th>
+                    <th><?= RechercheIn::sort('urlPhoto', 'Url photo', $_GET) ?></th>
+                    <th><?= RechercheIn::sort('biographie', 'Biographie', $_GET) ?></th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($postsArtiste as $postArtiste): ?>
+                <tr>
+                    <td><?= $postArtiste['numA'] ?></td>
+                    <td><?= $postArtiste['nomA'] ?></td>
+                    <td><?= $postArtiste['prenomA'] ?></td>
+                    <td><?= $postArtiste['urlPhoto'] ?></td>
+                    <td><?= $postArtiste['biographie'] ?></td>
+                </tr>
+            <?php endforeach ?>
+            </tbody>
+        </table>
+    </div>
+    <div class="PSPA">
+        <?php if ($pages > 1 && $page > 1): ?>
+            <a href="?<?= RechercheIn::withParam($_GET, "p", $page-1) ?>">Page précéente</a>
+        <?php endif ?>
+        <?php if ($pages > 1 && $page < $pages): ?>
+            <a href="?<?= RechercheIn::withParam($_GET, "p", $page+1) ?>">Page suivante</a>
+        <?php endif ?>   
+    </div>    
+</body>
+</html>

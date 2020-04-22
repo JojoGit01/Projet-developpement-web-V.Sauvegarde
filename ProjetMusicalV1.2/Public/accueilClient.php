@@ -2,6 +2,9 @@
 require '../vendor/autoload.php';
 use App\App;
 $user = App::getAuth()->user();
+if(!$user) {
+    header('Location: ../index.php');
+}
 ?>
 
 <!DOCTYPE html>
