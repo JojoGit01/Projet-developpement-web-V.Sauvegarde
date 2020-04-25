@@ -1,0 +1,290 @@
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body,html{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+    background: lightgrey;
+}
+
+.body-A{
+    -webkit-animation: slideDown 2s;
+            animation: slideDown 2s;
+}
+.topbar{
+    height: 110px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    font-size: 25px;
+    z-index: 5;
+}
+.topbar nav{
+    margin: 10px;
+}
+.topbar .topbar-D{
+    float:right;
+    margin-top: 25px;
+}
+.topbar .topbar-D a{
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 50px;
+}
+.topbar .topbar-D a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+.body-A{
+    margin-top: 109px;
+    width: 100%;
+}
+.presentation-Projet{
+    width: 100%;
+    position: relative;
+}
+
+.presentation-Projet{
+    text-align: center;
+    font-size:  50px;
+    z-index: 4;
+    height: 500px;
+    background: no-repeat center center / cover url("../img/firstimg.jpg");
+}
+.presentation-Projet .text-P{
+    position: relative;
+    top: 125px;
+    right: auto;
+    left: auto;
+}
+.presentation-Projet .text-P h2{
+    color: red;
+    text-decoration: underline;
+}
+.presentation-Projet .text-P p{
+    margin-top: -20px;
+    color: grey
+}
+.main-AccueilSite{
+    width: 1205px;
+    background: #FF9966;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top:40px;
+    right: 0;
+    left: 0;
+    margin-left: 300px;
+}
+.main-AccueilSite .main-Site{
+    width: 800px;
+    margin-left: 20px;
+}
+.main-AccueilSite .main-Site h2{
+    font-size: 40px;
+    text-align: center;
+    color: #000;
+    text-decoration: underline;
+}
+.main-AccueilSite .main-Site .img-presentation-Musical{
+    margin-left: -20px;
+    height: 400px;
+    background: no-repeat center center / cover url("../img/article-img.jpg");
+}
+.main-Site .h4-Question{
+    color: red;
+    font-size: 25px;
+}
+.main-Site ul{
+    font-size: 20px;
+    margin-top: -20px;
+    opacity: 0.8;
+}
+.main-Site li{
+    padding : 3px;
+}
+.main-Site .pFinMainSite{
+    font-size: 20px;
+}
+.main-Site .pFinMainSite a{
+    color: #000;
+    opacity: 0.9;
+}
+.main-Site .pFinMainSite a:hover{
+    opacity: 1;
+    color:blue;
+    text-decoration: underline;
+}
+.hr-separe{
+    width: 5px;
+    border: 3px solid #000;
+    margin-left: 2px;
+}
+
+.aside-Accueil{
+    width: 400px;
+    margin-left: 20px
+}
+.aside-Accueil h2{
+    color:red;
+    font-size: 40px;
+    margin-bottom: -10px;
+}
+.aside-Accueil .fonctionnalité-Site ul{
+    font-size: 30px;
+}
+.aside-Accueil .fonctionnalité-Site li{
+    padding: 5px;
+}
+.aside-Accueil .fonctionnalité-Site a{
+    color: #000;
+    opacity: 0.8;
+    padding: 2px ;
+    text-decoration: none;
+}
+.aside-Accueil .fonctionnalité-Site a:hover{
+    text-decoration:underline ;
+    opacity: 1;
+}
+.aside-Accueil p{
+    font-size: 22px;
+}
+.aside-Accueil p a {
+    color : #000;
+}
+.aside-Accueil p a:hover{
+    color: #fff;
+}
+.footer{
+    width: 100%;
+    background: #050505;
+}
+.footer nav{
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+}
+.footer nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: grey;
+    opacity: 0.6;
+}
+.footer nav a:hover{
+    color: grey;
+    opacity: 1;
+}
+@-webkit-keyframes slideDown{
+    from{
+        -webkit-transform: translateY(300px);
+                transform: translateY(300px);
+        opacity: 0;
+    }to{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideDown{
+    from{
+        -webkit-transform: translateY(300px);
+                transform: translateY(300px);
+        opacity: 0;
+    }to{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 1500px){
+    .main-AccueilSite{margin-left: 40px;}
+}
+@media only screen and (max-width:1250px){
+    .main-AccueilSite{
+        width: 820px;
+        margin-left : 180px;
+        display: inline-block;
+        font-size: 40px;
+    }
+    .hr-separe{display: none;}
+    .main-Site .h2-preSite{margin-right : 225px}
+    .aside-Accueil,.Pre-Site{margin-left : 200px;}
+}
+@media only screen and (max-width:1075px){
+    .topbar{
+        position: absolute;
+        height: 200px;
+        background: grey;
+    }
+    .topbar nav {
+        float : none;
+        text-align: center;
+    }
+    .topbar nav a,.footer nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .main-AccueilSite{margin-left:75px;}
+}
+@media only screen and (max-width:925px){
+    .topbar{
+        height: 300px;
+        background: grey;
+    }
+    .presentation-Projet{margin-top: 300px;}
+}
+@media only screen and (max-width:800px){
+    .main-AccueilSite{
+        margin-left: 175px;
+        width: 400px;
+    }  
+    .main-AccueilSite .main-Site h2{
+        font-size: 26px;
+        margin-right: 25px;
+    }
+    .main-AccueilSite .main-Site,.main-AccueilSite .main-Site .img-presentation-Musical,.Pre-Site{width: 400px;}
+    .Pre-Site, .aside-Accueil{margin-left: 0;}
+    .aside-Accueil{margin-left: 10px;}
+    .main-Site .pFinMainSite{font-size: 18px;}
+}
+@media only screen and (max-width:670px){
+    .body-A .main-AccueilSite{margin-left: 125px;}  
+}
+@media only screen and (max-width:570px){
+    .body-A .main-AccueilSite{margin-left: 70px;}  
+}
+@media only screen and (max-width:500px){
+    .body-A .main-AccueilSite{margin-left: 40px;}
+}
+@media only screen and (max-width:480px){
+    .body-A .main-AccueilSite{margin-left: 10px;}
+    .topbar{height: 370px;}
+    .presentation-Projet{height: 550px;}
+}
+@media only screen and (max-width:460px){
+    .topbar{height: 460px;}
+    .body-A .presentation-Projet{padding: 1px;height: 600px;}
+}
+@media only screen and (max-width:410px){
+    .body-A {width: 286px;}
+    .body-A h2{font-size: 45px;}
+    .body-A p{font-size: 36px;}
+    .body-A .presentation-Projet{height: 450px;}
+    .body-A .main-AccueilSite{margin-left: 0px;}
+    .body-A .main-AccueilSite,.body-A .main-AccueilSite .main-Site,.body-A .main-AccueilSite .Pre-Site,.body-A .main-AccueilSite .aside-Accueil{width: 286px;}
+    .body-A .main-AccueilSite .Pre-Site ul{margin-right: 5px;}
+    .body-A .main-AccueilSite .Pre-Site .pFinMainSite{font-size: 13px;}
+    .body-A .main-AccueilSite .aside-Accueil h2{font-size: 30px;}
+    .body-A .main-AccueilSite .img-presentation-Musical{width: 286px;}
+    .body-A h2{font-size: 45px;}
+    .footer nav a{font-size: 14px;}
+}

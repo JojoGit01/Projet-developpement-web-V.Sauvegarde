@@ -10,7 +10,7 @@ class RechercheIn {
         $direction = $data[self::DIR_KEY] ?? null;
         $icon = "";
         if($sort === $sortKey){
-            $icon = $direction === 'asc' ? "^" : "v";
+            $icon = $direction === 'asc' ? "▲" : "▼";
         }
         $url = self::withParams($data, [
             'sort' => $sortKey,

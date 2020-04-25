@@ -2,15 +2,15 @@
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
 use App\App;
-use App\Artiste;
-use App\AllInformation as getArtiste;
+use App\Chanson;
+use App\AllInformation as getChanson;
 use App\RechercheIn;
 $user = App::getAuth()->user();
 
-$artiste = new Artiste(new getArtiste($query, $queryCount, $params, $sortable));
-$postsArtiste = $artiste->selectArtiste(App::getPDO(), $_GET['q'], $_GET['sort'], $_GET['dir'], $_GET['p']);
-$page = getArtiste::$page;
-$pages = getArtiste::$pages;
+$chanson = new Chanson(new getChanson($query, $queryCount, $params, $sortable));
+$postsChanson = $chanson->selectChanson(App::getPDO(), $_GET['q'], $_GET['sort'], $_GET['dir'], $_GET['p']);
+$page = getChanson::$page;
+$pages = getChanson::$pages;
 
 ?>
 
@@ -23,7 +23,7 @@ $pages = getArtiste::$pages;
 </head>
 <body>
     <div class="body-artiste">
-        <h1>Artiste Musical</h1>
+        <h1>Chanson Musical</h1>
         <div class="rechercher">
         <form action="">
             <input type="text" name="q" placeholder="Recherche par nom" value="<?= sanitizeString($_GET['q'] ?? null) ?>"/>
@@ -33,21 +33,25 @@ $pages = getArtiste::$pages;
             <table>
                 <thead>
                     <tr>
-                        <th><?= RechercheIn::sort('numA', 'Numéro artiste', $_GET) ?></th>
-                        <th><?= RechercheIn::sort('nomA', 'Nom artiste', $_GET) ?></th>
-                        <th><?= RechercheIn::sort('prenomA', 'Prénom artiste', $_GET) ?></th>
-                        <th><?= RechercheIn::sort('urlPhoto', 'Url photo', $_GET) ?></th>
-                        <th><?= RechercheIn::sort('biographie', 'Biographie', $_GET) ?></th>
+                        <th><?= RechercheIn::sort('codeChanson', 'Code chanson', $_GET) ?></th>
+                        <th><?= RechercheIn::sort('titreC', 'Titre', $_GET) ?></th>
+                        <th><?= RechercheIn::sort('duree', 'Durée', $_GET) ?></th>
+                        <th><?= RechercheIn::sort('auteurC', 'Auteur', $_GET) ?></th>
+                        <th><?= RechercheIn::sort('noteOpinionC', 'Note d\' opinion', $_GET) ?></th>
+                        <th><?= RechercheIn::sort('numA', 'Numéro Artiste', $_GET) ?></th>
+                        <th><?= RechercheIn::sort('codeAlbum', 'Code Album', $_GET) ?></th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($postsArtiste as $postArtiste): ?>
+                <?php foreach ($postsChanson as $postChanson): ?>
                     <tr>
-                        <td><?= $postArtiste->numA ?></td>
-                        <td><?= $postArtiste->nomA ?></td>
-                        <td><?= $postArtiste->prenomA ?></td>
-                        <td><?= $postArtiste->urlPhoto ?></td>
-                        <td><?= $postArtiste->biographie ?></td>
+                        <td><?= $postChanson->codeChanson ?></td>
+                        <td><?= $postChanson->titreC ?></td>
+                        <td><?= $postChanson->duree ?></td>
+                        <td><?= $postChanson->auteurC ?></td>
+                        <td><?= $postChanson->noteOpinionC ?></td>
+                        <td><?= $postChanson->numA ?></td>
+                        <td><?= $postChanson->codeAlbum ?></td>
                     </tr>
                 <?php endforeach ?>
                 </tbody>
@@ -61,6 +65,6 @@ $pages = getArtiste::$pages;
                 <a href="?<?= RechercheIn::withParam($_GET, "p", $page+1) ?>">Page suivante</a>
             <?php endif ?>   
         </div> 
-    </div>   
+    </div>  
 </body>
 </html>

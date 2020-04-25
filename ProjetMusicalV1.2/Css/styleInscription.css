@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+.body-I{
+    background: no-repeat center center / cover url("../img/backI.jpg");
+    height: auto;
+}
+/* topbar */
+.topbar{
+    height: 110px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    font-size: 25px;
+    z-index: 5;
+}
+.topbar nav{
+    margin: 10px;
+}
+.topbar .topbar-D{
+    float:right;
+    margin-top: 25px;
+}
+.topbar .topbar-D a{
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 50px;
+}
+.topbar .topbar-D a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* body-inscription */
+.body-inscription{
+    margin-top: 120px;
+    width: 800px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+.main-inscription .fieldsetI{
+    background: #fff;
+
+}
+.main-inscription .fieldsetI legend{
+    text-decoration: underline;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.main-inscription .fieldsetI label{
+    display: block;
+    float: left;
+    width: calc(800px - 50%);
+    padding: 20px;
+}
+.main-inscription .fieldsetI input{
+    float: left;
+    padding: 15px;
+}
+.main-inscription .fieldsetI input[type=date]{
+    /*width: calc(800px / 3.265306122);*/
+    width: calc(800px / 4.55);
+}
+.main-inscription .fieldsetI input[type=submit],
+.main-inscription .fieldsetI input[type=reset]{
+    margin-top: 10px;
+}
+.main-inscription .fieldsetI input[type=reset]{
+    margin-left: 20px;
+}
+.main-inscription .fieldsetI input[type=submit]:hover,
+.main-inscription .fieldsetI input[type=reset]:hover{
+    opacity: 1.2;
+    transition: opacity 0.2s;
+    box-shadow: 8px 8px 8px #000;
+}
+.buttonI{
+    width: 250px;
+    float: left;
+}
+.main-inscription .fieldsetI .error {
+    color: red;
+}
+
+/* footer */
+.footer{
+    width:100%;
+    background: #050505;
+}
+.footer nav{
+    margin-top: 200px;
+    padding: 15px;
+    text-align: center;
+}
+.footer nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: grey;
+    opacity: 0.6;
+}
+.footer nav a:hover{
+    color: grey;
+    opacity: 1;
+}
+@media only screen and (max-width:1000px){
+    .topbar{
+        position: absolute;
+        background: grey;
+    }
+    .topbar nav {
+        float : none;
+        text-align: center;
+    }
+    .topbar nav a,.footer nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width:825px){
+    .topbar{
+        height: 175px;
+    }
+    .body-inscription {
+        margin-top: 180px;
+        width: 600px;
+    }
+    .body-inscription label, .body-inscription input{
+        margin-left: 150px;
+    }
+    .main-inscription .fieldsetI label{
+        width: 400px;
+    }
+    .buttonI{
+        width: 350px;
+    }
+}
+@media only screen and (max-width:680px){
+    .topbar{
+        height: 270px;
+    }
+    .body-inscription {
+        margin-top: 280px;
+        width: 500px;
+    }
+    .body-inscription label, .body-inscription input{
+        margin-left: 90px
+    }
+    .main-inscription .fieldsetI label{
+        width: 300px;
+    }
+}
+@media only screen and (max-width:515px){
+    .body-inscription {
+        margin-right: 50%;
+        width: 286px;
+    }
+    .body-inscription .fieldsetI{
+        margin-left: 30px;
+    }
+    .body-inscription .fieldsetI label,.body-inscription .fieldsetI input{
+        margin-left: 0px;
+    }.body-inscription .fieldsetI label{
+        font-size: 20px;
+    }
+    .body-inscription .fieldsetI input[type=submit],
+    .body-inscription .fieldsetI input[type=reset]{
+        margin: 0 auto;
+    }.body-inscription .fieldsetI input[type=reset]{
+        margin-left: 17.5px;
+    }
+    .main-inscription .fieldsetI label{
+        width: 275px;
+    }
+}
+@media only screen and (max-width:462px){
+    .topbar{
+        height: 360px;
+    }
+    .body-inscription {
+        margin-top: 390px;
+    }
+}
+@media only screen and (max-width:435px){
+    .body-I .body-inscription{
+        margin-left: -20px;
+    }
+}
+@media only screen and (max-width:410px){
+    .body-inscription .main-inscription{
+        margin-left: -30px;
+    }
+}
+@media only screen and (max-width:340px){
+    .footer{
+        font-size: 13px;
+    }
+}
+
+/* A savoir 
+    margin-left: 50%;
+    margin-right: 50%;
+*/

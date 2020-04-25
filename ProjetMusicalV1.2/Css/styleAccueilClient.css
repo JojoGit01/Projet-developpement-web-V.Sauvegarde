@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+    background: lightgrey;
+}
+
+/* topbar */
+.topbarClient{
+    height: 110px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    font-size: 30px;
+    z-index: 5;
+}
+.topbarClient nav{
+    margin: 10px;
+}
+.topbarClient .topbarCLient-D{
+    float:right;
+    margin-top: 25px;
+}
+.topbarClient .topbarCLient-D a{
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 50px;
+}
+.topbarClient .topbarCLient-D a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+
+/* Pour le deroulant */
+#galerie{
+    margin-top: 115px;
+    position: relative;
+}
+#galerie img{
+    position: absolute;
+    display: none;
+    width: 300px;
+    height: 220px;
+}
+#galerie .active{
+    display: block;
+}
+/*************************/
+
+.slideContainGalerie{
+    width:100%;
+    height: 250px;
+}
+
+/* body  CLient */
+.body-accueilMusical{
+    width: 100%;
+}
+.presentation-accueilMusical .image-backgroundAccueil{
+    height: 400px;
+    background: no-repeat center center / cover url("../img/firstimg.jpg");
+    margin-top: -195px;
+    margin-bottom: 25px;
+}
+.presentation-accueilMusical .title-background{
+    text-align: center;
+    color: red;
+    text-decoration: underline;
+    font-size: 60px;
+}
+.container-accueilMusical{
+    margin: 0;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+
+}
+.main-accueilMusical .aspect-accueilMusical{
+    display: flex;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-accueilMusical .aspect-accueilMusical img{
+    width: 100px;
+    float: left;
+    padding-bottom: 20px;
+    margin-right: 15px
+}
+.main-accueilMusical .aspect-accueilMusical h4{
+    font-size: 25px
+}
+.main-accueilMusical .aspect-accueilMusical p{
+    margin-top: -25px;
+    margin-right: 10px;
+}
+.download-sound{
+    margin-right : 100px;
+}
+.download-sound .sound, .pub-zap .zap{
+    margin-top: 30px;
+}
+.separate{
+    border: 4px solid #000;
+    width: 400px;
+}
+
+.site-view{
+    width: 100%;
+}
+.see-information h2{
+    font-size: 40px;
+}
+.see-information .search-information h3{
+    margin-left: 50px;
+}
+.see-information .search-information h3:before{
+    content: "↪ ";
+
+}
+.see-information .search-information a{
+    text-decoration: none;
+    color: grey;
+}
+.see-information .search-information a:hover{
+    color : #000;
+    text-decoration: underline;
+}
+
+.site-message{
+    margin-top: 30px;
+    width: 600px;
+}
+.site-message .fieldset legend{
+    font-size: 30px
+}
+.site-message .fieldset .comment{
+    max-height: 200px;
+    max-width: 400px;
+    margin-left: 50px;
+}
+.site-message .fieldset input {
+    font-size: 25px;
+    margin-left: 50px;
+}
+.separate-main-aside{
+    border: 2px solid #000;
+    margin-left :20px;
+    margin-right: 20px
+}
+.aside-accueilMusical{
+    width: auto;
+    margin-top : 20px;
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    background: #050505;
+}
+.footer nav{
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+}
+.footer nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: grey;
+    opacity: 0.6;
+}
+.footer nav a:hover{
+    color: grey;
+    opacity: 1;
+}

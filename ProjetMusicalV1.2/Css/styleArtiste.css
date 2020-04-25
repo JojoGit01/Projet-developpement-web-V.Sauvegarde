@@ -1,0 +1,130 @@
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body,html {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* topbar */
+.topbarClient{
+    height: 110px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    font-size: 30px;
+    z-index: 5;
+}
+.topbarClient nav{
+    margin: 10px;
+}
+.topbarClient .topbarCLient-D{
+    float:right;
+    margin-top: 25px;
+}
+.topbarClient .topbarCLient-D a{
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 50px;
+}
+.topbarClient .topbarCLient-D a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+
+.body-artiste{
+    width: 100%;
+    margin-top: 125px;
+}
+.body-artiste .main-artiste {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-artiste .artiste-title{
+    font-size: 50px;
+    text-align: center;
+    color: lightseagreen;
+}
+
+.main-artiste .rechercher input{
+    border: 4px solid #000;
+    border-radius: 30px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 3px 3px 3px; 
+    margin-bottom: 10px;
+}
+
+.main-artiste .table-artiste{
+    border: 5px solid #000;
+}
+.table-artiste .table{
+    border-spacing: 5px 1rem;
+    width: 100%;
+}
+.table-artiste .table a{
+    font-size: 25px;
+    color: #000;
+}
+.table-artiste .table a:hover{
+    color: blue;
+}
+.table-artiste .table th{
+    border: 5px solid #000;
+}
+.table-artiste .table td{
+    font-size: 22px;
+    padding-top: 5px;
+    text-align: center;
+}
+.table-artiste .table .bio-cal{
+    text-align: left;
+}
+.table-artiste .separate-posts{
+    border: 2px solid #000;
+}
+
+.paps {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.paps .pa a, .paps .ps a{
+    text-decoration: none;
+    text-align: center;
+    border: 3px solid #000;
+    border-radius: 8px;
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    background: #050505;
+}
+.footer nav{
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+}
+.footer nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: grey;
+    opacity: 0.6;
+}
+.footer nav a:hover{
+    color: grey;
+    opacity: 1;
+}
+
+

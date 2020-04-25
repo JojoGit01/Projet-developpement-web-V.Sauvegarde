@@ -33,25 +33,72 @@ if(isset($_POST['ValiderI'])){
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-</head>
-<body>
-    <div class="error">
-        <?= $emailCheck && $identifiantCheck ? $errorEmail. "<br>" . $errorIdentifiant : ($emailCheck? $errorEmail : $errorIdentifiant) ?>
-    </div>
-    <form action="" method="post">
-        <div class="">
-            <input type="text" name="nameI" palceholder="Entrez nom" required>
-            <input type="text" name="prenomI" placeholdeer="Prenom" required>
-            <input type="date" name="ddnI" placeholder="date de naissance" required>
-            <input type="email" name="emailI" placeholder="email" required>
-            <input type="text" name="identfiantI" placeholder="identifiant" required>
-            <input type="password" name="passwordI" placeholder="mdp" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Css/styleInscription.css">
+        <title>Inscription Musical</title>
+    </head>
+    <body class="body-I">
+        <header class="topbar">
+            <nav>
+                <div class="topbar-G"></div>
+                    <img src="../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
+                </div>
+                <div class="topbar-D">
+                    <a href="../index.php" title="Accueil Musical">Accueil</a>
+                    <a href="connexion.php" title="Connexion Musical">Connexion</a>
+                    <a href="#" title="A propos">A propos</a>
+                </div>
+            </nav>
+        </header>
+        <div class="body-inscription">
+            <main class="main-inscription">
+                <form action="" method="post">
+                    <fieldset class="fieldsetI">
+                        <legend>Inscription</legend>
+                        <?php if($emailCheck && $identifiantCheck || $emailCheck || $identifiantCheck): ?>
+                            <label class="error"><?= $emailCheck && $identifiantCheck ? $errorEmail. "<br>" . $errorIdentifiant : ($emailCheck? $errorEmail : $errorIdentifiant) ?></label>
+                        <?php endif ?>
+                        <div class="nomI">
+                            <label for="nomI">Nom :</label>
+                            <input type="text" name="nameI" placeholder="Entrez nom" required>
+                        </div>
+                        <div class="prenomI">
+                            <label for="prenomI">Prenom :</label>
+                            <input type="text" name="prenomI" placeholder="Entrez prenom" required>
+                        </div>
+                        <div class="dateDeNaissanceI">
+                            <label for="dateDeNaissanceI">Date de naissance :</label>
+                            <input type="date" name="ddnI" placeholder="date de naissance" required>
+                        </div>
+                        <div class="emailI">
+                            <label for="emailI">Email :</label>
+                            <input type="email" name="emailI" placeholder="Votre email" required>
+                        </div>
+                        <div class="identifiantI">
+                            <label for="identifiantI">Identifiant :</label>
+                            <input type="text" name="identfiantI" placeholder="Votre identifiant" required>
+                        </div>
+                        <div class="motDePasseI">
+                            <label for="motDePasseI">Mot de passe :</label>
+                            <input type="password" name="passwordI" placeholder="Votre mot de passe" required>
+                        </div>
+                        <div class="buttonI">
+                            <input type="submit" id="validerI" name="ValiderI" value="Valider">
+                            <input type="reset" id="resetI" name="resetI" value="Annuler">
+                        </div>
+                    </fieldset>
+                </form>
+            </main>
         </div>
-        <input type="submit" name="ValiderI" value="Valider">
-    </form>
-</body>
+        <footer class="footer">
+            <nav>
+                <a href="#" title="Conctater nous">Contactez nous</a>
+                <a href="#" title="Information légales">Information légales</a>
+                <a href="#" title="Politique de confidentialité Musical">Politique de confidentialité Musical</a>
+                <a href="#" title="Information sur les cookies">Information sur les cookies</a>
+            </nav>
+        </footer>
+    </body>
 </html>
