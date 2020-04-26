@@ -6,6 +6,9 @@ use App\Album;
 use App\AllInformation as getAlbum;
 use App\RechercheIn;
 $user = App::getAuth()->user();
+if(!$user) {
+    header('Location: ../../index.php');
+}
 
 $album = new Album(new getAlbum($query, $queryCount, $params, $sortable));
 $postsAlbum = $album->selectAlbum(App::getPDO(), $_GET['q'], $_GET['sort'], $_GET['dir'], $_GET['p']);
@@ -19,15 +22,16 @@ $pages = getAlbum::$pages;
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../Css/styleArtiste.css">
+        <script type="text/javascript" src="../../Js/footerInformation/information.js"></script>
+        <link rel="stylesheet" href="../../Css/styleAAC.css">
+        <link rel="stylesheet" href="../../Css/styleFooter.css">
+        <link rel="stylesheet" href="../../Css/styleTopbar.css">
         <title>Album Musical</title>
     </head>
     <body>
         <header class="topbarClient">
             <nav>
-                <div class="topbarClient-G"></div>
-                    <img src="../../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
-                </div>
+                <img src="../../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbarCLient-D">
                     <a href="../accueilClient.php" title="Artiste">Accueil</a>
                     <a href="artiste.php" title="Album">Artiste</a>
@@ -37,15 +41,15 @@ $pages = getAlbum::$pages;
                 </div>
             </nav>
         </header>
-        <div class="body-artiste">
-            <main class="main-artiste">
-                <h1 class="artiste-title">Album Musical</h1>
+        <div class="body-album">
+            <main class="main-album">
+                <h1 class="album-title">Album Musical</h1>
                 <div class="rechercher">
                     <form action="">
                         <input type="text" name="q" placeholder="Rechercher par nom" value="<?= sanitizeString($_GET['q'] ?? null) ?>"/>
                     </form>
                 </div>
-                <div class="table-artiste">
+                <div class="table-album">
                     <table class="table">
                         <thead>
                             <tr>
@@ -59,10 +63,11 @@ $pages = getAlbum::$pages;
                             <tr><td colspan = "6"><hr class="separate-posts"></td></tr>
                             <?php foreach ($postsAlbum as $postAlbum): ?>
                                 <tr>
-                                    <td><?= $postAlbum->codeAlbum ?></td>
+                                    <td><strong><?= $postAlbum->codeAlbum ?></strong></td>
                                     <td><?= $postAlbum->nomAL ?></td>
                                     <td><?= $postAlbum->anneeSortie ?></td>
-                                    <td><img src="../../<?= $postAlbum->urlPochette ?>" alt="image album" width="300px" height="auto"></td>
+                                    <td><img src="<?= $postAlbum->urlPochette ?>" alt="image album" width="300px" height="auto"></td>
+                                    <td><a href="#">Voir album</a></td>
                                 </tr>
                                 <tr><td colspan = "6"><hr class="separate-posts"></td></tr>
                             <?php endforeach ?>
@@ -83,13 +88,6 @@ $pages = getAlbum::$pages;
                 </div>
             </main>
         </div>   
-        <footer class="footer">
-            <nav>
-                <a href="#" title="Conctater nous">Contactez nous</a>
-                <a href="#" title="Information légales">Information légales</a>
-                <a href="#" title="Politique de confidentialité Musical">Politique de confidentialité Musical</a>
-                <a href="#" title="Information sur les cookies">Information sur les cookies</a>
-            </nav>
-        </footer> 
+        <?php require_once '../FooterUse/footer.php' ?>
     </body>
 </html>

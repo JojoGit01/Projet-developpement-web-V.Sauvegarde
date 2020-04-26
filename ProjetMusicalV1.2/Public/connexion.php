@@ -32,15 +32,14 @@ if(isset($_POST['ValiderC'])) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../Js/footerInformation/information.js"></script>
         <link rel="stylesheet" href="../Css/styleConnexion.css">
         <title>Connexion Musical</title>
     </head>
     <body class="body-C">
         <header class="topbar">
             <nav>
-                <div class="topbar-G"></div>
-                    <img src="../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
-                </div>
+                <img src="../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbar-D">
                     <a href="../index.php" title="Accueil Musical" class="accueil">Accueil</a>
                     <a href="#" title="A propos" class="aPropos">A propos</a>
@@ -71,13 +70,6 @@ if(isset($_POST['ValiderC'])) {
                 </form>
             </main>
         </div>
-        <footer class="footer">
-            <nav>
-                <a href="#" title="Conctater nous">Contactez nous</a>
-                <a href="#" title="Information légales">Information légales</a>
-                <a href="#" title="Politique de confidentialité Musical">Politique de confidentialité Musical</a>
-                <a href="#" title="Information sur les cookies">Information sur les cookies</a>
-            </nav>
-        </footer>
+        <?php require_once 'FooterUse/footer.php' ?>
     </body>
 </html>

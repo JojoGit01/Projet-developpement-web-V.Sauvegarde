@@ -14,15 +14,14 @@ if(User::checkIfUserCo(App::getAuth())){
         <meta name="Description" content="Site musical">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Js/footerInformation/information.js"></script>
         <link rel="stylesheet" href="Css/style.css">
         <title>Accueil Musical</title>
     </head>
     <body>
         <header class="topbar">
             <nav>
-                <div class="topbar-G"></div>
-                    <img src="img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
-                </div>
+                <img src="img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbar-D">
                     <a href="index.php" title="Accueil Musical">Accueil</a>
                     <a href="Public/inscription.php" title="Inscription Musical">Inscription</a>
@@ -73,13 +72,6 @@ if(User::checkIfUserCo(App::getAuth())){
                 </aside>
             </main> 
         </div>
-        <footer class="footer">
-            <nav>
-                <a href="#" title="Conctater nous">Contactez nous</a>
-                <a href="#" title="Information légales">Information légales</a>
-                <a href="#" title="Politique de confidentialité Musical">Politique de confidentialité Musical</a>
-                <a href="#" title="Information sur les cookies">Information sur les cookies</a>
-            </nav>
-        </footer>
+        <?php require_once 'Public/FooterUse/footer.php' ?>
     </body>
 </html>

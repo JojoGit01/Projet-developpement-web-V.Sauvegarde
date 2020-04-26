@@ -11,18 +11,19 @@ if(!$user) {
 <html lang="fr">
     <head>
         <script type="text/javascript" src="../Js/jquery.js"></script>
+        <script type="text/javascript" src="../Js/footerInformation/information.js"></script>
         <script src="../Js/galerieSysteme.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Css/styleFooter.css">
         <link rel="stylesheet" href="../Css/styleAccueilClient.css">
+        <link rel="stylesheet" href="../Css/styleTopbar.css">
         <title>Site Musical</title>
     </head>
     <body>
         <header class="topbarClient">
             <nav>
-                <div class="topbarClient-G"></div>
-                    <img src="../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
-                </div>
+                <img src="../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbarCLient-D">
                     <a href="viewsClient/artiste.php" title="Artiste">Artiste</a>
                     <a href="viewsClient/album.php" title="Album">Album</a>
@@ -32,14 +33,15 @@ if(!$user) {
                 </div>
             </nav>
         </header>
-        <div class="slideContainGalerie">
-            <div id="galerie">
-                <img src="../img/firstimg.jpg" alt="image1" class="active"/>
-                <img src="../img/no-pub.png" alt="image2"/>
-                <img src="../img/zap-inf.png" alt="image3"/>
-            </div>
-        </div>
+
         <div class="body-accueilMusical">
+            <div class="slideContainGalerie">
+                <div id="galerie">
+                    <img src="../img/firstimg.jpg" alt="image1" class="active"/>
+                    <img src="../img/no-pub.png" alt="image2"/>
+                    <img src="../img/zap-inf.png" alt="image3"/>
+                </div>
+            </div>
             <div class="presentation-accueilMusical">
                 <h2 class="title-background">Bienvenue <?= $user->identifiantC ?></h2>
                 <div class="image-backgroundAccueil"></div>
@@ -119,13 +121,9 @@ if(!$user) {
                 </aside>
             </div>
         </div>
-        <footer class="footer">
-            <nav>
-                <a href="#" title="Conctater nous">Contactez nous</a>
-                <a href="#" title="Information légales">Information légales</a>
-                <a href="#" title="Politique de confidentialité Musical">Politique de confidentialité Musical</a>
-                <a href="#" title="Information sur les cookies">Information sur les cookies</a>
-            </nav>
-        </footer> 
+        <?php 
+            // footer
+            require_once 'FooterUse/footer.php' 
+        ?>
     </body>
 </html>

@@ -5,7 +5,11 @@ use App\App;
 use App\Artiste;
 use App\AllInformation as getArtiste;
 use App\RechercheIn;
+
 $user = App::getAuth()->user();
+if(!$user) {
+    header('Location: ../../index.php');
+}
 
 $artiste = new Artiste(new getArtiste($query, $queryCount, $params, $sortable));
 $postsArtiste = $artiste->selectArtiste(App::getPDO(), $_GET['q'], $_GET['sort'], $_GET['dir'], $_GET['p']);
@@ -18,15 +22,16 @@ $pages = getArtiste::$pages;
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../Css/styleArtiste.css">
+        <script type="text/javascript" src="../../Js/footerInformation/information.js"></script>
+        <link rel="stylesheet" href="../../Css/styleAAC.css">
+        <link rel="stylesheet" href="../../Css/styleFooter.css">
+        <link rel="stylesheet" href="../../Css/styleTopbar.css">
         <title>Artiste Musical</title>
     </head>
     <body>
         <header class="topbarClient">
             <nav>
-                <div class="topbarClient-G"></div>
-                    <img src="../../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
-                </div>
+                <img src="../../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbarCLient-D">
                     <a href="../accueilClient.php" title="Artiste">Accueil</a>
                     <a href="album.php" title="Album">Album</a>
@@ -62,7 +67,7 @@ $pages = getArtiste::$pages;
                                     <td><strong><?= $postArtiste->numA ?></strong></td>
                                     <td><?= $postArtiste->nomA ?></td>
                                     <td><?= $postArtiste->prenomA ?></td>
-                                    <td><img src="../../<?= $postArtiste->urlPhoto ?>" alt="<?= $postArtiste->urlPhoto ?>" width="300px" height="auto"></td>
+                                    <td><img src="<?= $postArtiste->urlPhoto ?>" alt="<?= $postArtiste->urlPhoto ?>" width="300px" height="auto"></td>
                                     <td class="bio-cal"><?= $postArtiste->biographie ?></td>
                                     <td><a href="#"><img src="../../img/lectureAudio.png" alt="lecture audio" width="150px" height="auto"></a></td>
                                 </tr>
@@ -85,13 +90,6 @@ $pages = getArtiste::$pages;
                 </div>
             </main>  
         </div>  
-        <footer class="footer">
-            <nav>
-                <a href="#" title="Conctater nous">Contactez nous</a>
-                <a href="#" title="Information légales">Information légales</a>
-                <a href="#" title="Politique de confidentialité Musical">Politique de confidentialité Musical</a>
-                <a href="#" title="Information sur les cookies">Information sur les cookies</a>
-            </nav>
-        </footer> 
+        <?php require_once '../FooterUse/footer.php' ?>
     </body>
 </html>

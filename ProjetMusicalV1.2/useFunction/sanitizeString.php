@@ -1,4 +1,7 @@
 <?php
+/*
+    - Ce code permet de sanitize les données rentrées par l'utilisateur
+*/
 // Sanitize les données //
 function sanitizeString($var)
 {

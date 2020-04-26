@@ -1,0 +1,37 @@
+/* Style footer only */
+
+.footer{
+    width: 100%;
+    background: #050505;
+}
+
+.footer nav{
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: grey;
+    opacity: 0.6;
+}
+
+.footer nav a:hover{
+    color: grey;
+    opacity: 1;
+}
+
+@media only screen and (max-width:1075px){
+    .footer nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width:410px){
+    .footer nav a{
+        font-size: 14px;
+    }
+}

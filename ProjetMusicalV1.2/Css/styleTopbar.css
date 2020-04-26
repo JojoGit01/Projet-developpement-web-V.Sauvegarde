@@ -1,0 +1,49 @@
+/* Style topbar only */
+.topbarClient{
+    height: 110px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    font-size: 30px;
+    z-index: 5;
+}
+.topbarClient nav{
+    margin: 10px;
+}
+.topbarClient .topbarCLient-D{
+    float:right;
+    margin-top: 25px;
+}
+.topbarClient .topbarCLient-D a{
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 50px;
+}
+.topbarClient .topbarCLient-D a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+@media only screen and (max-width:1290px){
+    .topbarClient{
+        position: absolute;
+        height: 200px;
+        background: grey;
+    }
+    .topbarClient nav {
+        float : none;
+        text-align: center;
+    }
+    .topbarClient nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .body-album, .body-artiste, .body-chanson , .main-note{
+        margin-top: 225px;
+    }
+}

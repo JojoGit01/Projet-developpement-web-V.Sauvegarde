@@ -6,7 +6,6 @@ function imageGalerie(){
         active.removeClass('active');
         next.fadeIn().addClass('active');
     });
-
 }
 // setInterval(<function>, <temps en ms>)
 setInterval('imageGalerie()', 2500);    

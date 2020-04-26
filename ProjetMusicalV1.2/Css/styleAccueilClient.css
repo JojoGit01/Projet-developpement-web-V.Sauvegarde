@@ -9,36 +9,7 @@ body,html{
     background: lightgrey;
 }
 
-/* topbar */
-.topbarClient{
-    height: 110px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    background: grey;
-    font-size: 30px;
-    z-index: 5;
-}
-.topbarClient nav{
-    margin: 10px;
-}
-.topbarClient .topbarCLient-D{
-    float:right;
-    margin-top: 25px;
-}
-.topbarClient .topbarCLient-D a{
-    color: #000;
-    opacity: 0.6;
-    text-decoration: none;
-    padding: 50px;
-}
-.topbarClient .topbarCLient-D a:hover{
-    text-decoration: underline;
-    opacity: 1;
-}
-
+/* topbar -> styleTopbar.ss */
 
 /* Pour le deroulant */
 #galerie{
@@ -163,23 +134,8 @@ body,html{
     margin-top : 20px;
 }
 
-/* footer */
-.footer{
-    width: 100%;
-    background: #050505;
-}
-.footer nav{
-    margin-top: 60px;
-    padding: 15px;
-    text-align: center;
-}
-.footer nav a{
-    text-decoration: none;
-    padding: 20px;
-    color: grey;
-    opacity: 0.6;
-}
-.footer nav a:hover{
-    color: grey;
-    opacity: 1;
+@media only screen and (max-width:1290px){
+    .body-accueilMusical{
+        margin-top: 200px;
+    }
 }

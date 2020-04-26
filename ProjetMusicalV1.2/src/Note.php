@@ -31,7 +31,6 @@ class Note{
         $selectNote = $pdo->prepare("SELECT note FROM noter WHERE codeChanson = '$idChanson' AND identifiantC = '$identifiantU'");   
         $selectNote->execute();
         self::$getUserNote = (int)$selectNote->fetch()->note;
-
         if($getLigneNumber === 0){
             // Note inexistante
             return false;
@@ -54,6 +53,8 @@ class Note{
         ]);
     }
 
+
+    // Pour modifier la note //
     public function userHaveNote($user) {
         $pdo = App::getPDO();
         $selectCountNoteHave = $pdo->prepare("SELECT COUNT(note) as noteHave FROM noter WHERE identifiantC = '$user'");
@@ -77,6 +78,17 @@ class Note{
         $pdo = App::getPDO();
         $updateNote = $pdo->prepare("UPDATE noter SET note = '$newNote' WHERE codeChanson = '$codeChanson' AND identifiantC = '$user'");
         $updateNote->execute();
+        return true;
+    }
+
+
+    // Afficher les notes des utilisateur //
+    public function selectAllNote() {
+        $pdo = App::getPDO();
+        $selectAll = $pdo->prepare("SELECT * FROM noter JOIN chanson ON noter.codeChanson = chanson.codeChanson");
+        $selectAll->execute();
+        $getAll = $selectAll->fetchAll();
+        return $getAll;
     }
 
 }
