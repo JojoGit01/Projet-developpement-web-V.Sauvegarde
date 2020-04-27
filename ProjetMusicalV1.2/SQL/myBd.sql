@@ -38,6 +38,7 @@ CREATE TABLE chanson (
     noteOpinionC SMALLINT NOT NULL,
     numA INT NOT NULL,
     codeAlbum INT NOT NULL,
+    son VARCHAR(1000) NOT NULL,
     PRIMARY KEY(codeChanson),
     FOREIGN KEY(numA) REFERENCES artiste(numA),
     FOREIGN KEY(codeAlbum) REFERENCES album(codeAlbum)
@@ -92,17 +93,18 @@ VALUES
 
 
 /* Insert chanson */
-INSERT INTO chanson (titreC, duree, auteurC, noteOpinionC, numA, codeAlbum) 
+INSERT INTO chanson (titreC, duree, auteurC, noteOpinionC, numA, codeAlbum, son) 
 VALUES 
-('Stars', '00:04:06', 'Marshmello', '5', '1', '1'),
-("J'ai ce que j'ai donné", '00:03:40', 'Johnny Hallyday','5', '2', '2'),
-('One Love', '00:03:53', 'Soprano', '5', '3', '3'),
-('Roar', '00:03:42', 'Katy Perry', '5', '4', '4'),
-('Intro', '00:01:10', 'Gims', '5', '5', '5'),
-("Hollywood's Bleeding", '00:02:36', 'Post Malone', '5', '6', '6'),
-('Dollhouse', '00:03:51', 'Melanie Martinez', '5', '7', '7'),
-('Modern Love', '00:04:46', 'David Bowie', '5', '8', '8'),
-('The Payback', '00:07:39', 'James Brown', '5', '9', '9'),
-('Jamming', '00:04:31', 'Bob Marley', '5', '10', '10'),
-('Come Together', '00:04:20', '	John Lennon', '5', '11', '11'),
-('Amigo', '00:02:55', 'Jul', '5', '12', '12'),
+('Stars', '00:03:29', 'Marshmello', '5', '1', '1', 'https://www.youtube.com/embed/A57B7B6w3kw'),
+("J'ai ce que j'ai donné", '00:03:40', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/LuCss-iwr-g'),
+('One Love', '00:03:53', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/3XJmq96AFck'),
+('Roar', '00:04:30', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/CevxZvSJLk8'),
+('Intro', '00:01:10', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/M_QjE8062LI'),
+("Hollywood's Bleeding", '00:02:36', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/w5GrxfjuTTI'),
+('Dollhouse', '00:04:25', 'Melanie Martinez', '5', '7', '7', 'https://www.youtube.com/embed/HcVv9R1ZR84'),
+('Modern Love', '00:03:49', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/HivQqTtiHVw'),
+('The Payback', '00:07:39', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/istJXUJJP0g'),
+('Jamming', '00:03:20', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/oFRbZJXjWIA'),
+('Come Together', '00:04:20', '	John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/45cYwDMibGo'),
+('Amigo', '00:04:04', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/eUgZZiPbXxg'),
+

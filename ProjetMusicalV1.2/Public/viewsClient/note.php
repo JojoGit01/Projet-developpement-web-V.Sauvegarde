@@ -36,7 +36,7 @@ if(isset($_POST['sendNote'])) {
 // Changer note //
 $noteNew = false;
 $getUserNote = $note->userHaveNote($user->identifiantC);    // Récupére si l'utilisateur à déja noter une chanson
-$notes = $note->getUserHaveNote($user->identifiantC);       // Récupére les chansons ayant noter
+$notes = $note->getUserHaveNote($user->identifiantC);       // Récupére les chansons ayant étaient noter par l'utilisateur
 if (isset($_POST['sendNewNote'])) {
     $getNewNote = $note->noteBewteen0_5(sanitizeString($_POST['newNote']));
     if($getNewNote){

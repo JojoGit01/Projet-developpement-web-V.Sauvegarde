@@ -8,7 +8,7 @@ class Note{
     public $codeChanson, $identifiantC, $note, $titreC;
     public function __construct () {}
 
-    public function noteBewteen0_5($noteNumber): bool {    
+    public function noteBewteen0_5 ($noteNumber) : bool {    
         $noteNumber > 5 || $noteNumber < 0 ?  $error = false : $error = true;
         return $error;
     }

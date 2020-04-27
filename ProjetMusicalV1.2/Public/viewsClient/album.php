@@ -33,8 +33,8 @@ $pages = getAlbum::$pages;
             <nav>
                 <img src="../../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbarCLient-D">
-                    <a href="../accueilClient.php" title="Artiste">Accueil</a>
-                    <a href="artiste.php" title="Album">Artiste</a>
+                    <a href="../accueilClient.php" title="Accueil">Accueil</a>
+                    <a href="artiste.php" title="Artiste">Artiste</a>
                     <a href="chanson.php" title="Chanson">Chanson</a>
                     <a href="note.php" title="Noter">Noter</a>
                     <a href="../../useFunction/logout.php" title="Se déconnecter">Se déconnecter</a>

@@ -33,7 +33,7 @@ $pages = getArtiste::$pages;
             <nav>
                 <img src="../../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbarCLient-D">
-                    <a href="../accueilClient.php" title="Artiste">Accueil</a>
+                    <a href="../accueilClient.php" title="Accueil">Accueil</a>
                     <a href="album.php" title="Album">Album</a>
                     <a href="chanson.php" title="Chanson">Chanson</a>
                     <a href="note.php" title="Noter">Noter</a>

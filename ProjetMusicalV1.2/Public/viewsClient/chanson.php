@@ -3,8 +3,8 @@ require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
 use App\App;
 use App\Chanson;
-use App\AllInformation as getChanson;
 use App\RechercheIn;
+use App\AllInformation as getChanson;
 
 $user = App::getAuth()->user();
 if(!$user) {
@@ -34,9 +34,9 @@ $pages = getChanson::$pages;
             <nav>
                 <img src="../../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbarCLient-D">
-                    <a href="../accueilClient.php" title="Artiste">Accueil</a>
+                    <a href="../accueilClient.php" title="Accueil">Accueil</a>
+                    <a href="artiste.php" title="Artiste">Artiste</a>
                     <a href="album.php" title="Album">Album</a>
-                    <a href="chanson.php" title="Chanson">Chanson</a>
                     <a href="note.php" title="Noter">Noter</a>
                     <a href="../../useFunction/logout.php" title="Se déconnecter">Se déconnecter</a>
                 </div>
@@ -64,20 +64,20 @@ $pages = getChanson::$pages;
                             </tr>
                         </thead>
                         <tbody>
-                        <tr><td colspan = "7"><hr class="separate-posts"></td></tr>
-                        <?php foreach ($postsChanson as $postChanson): ?>
-                            <tr>
-                                <td><?= $postChanson->codeChanson ?></td>
-                                <td><?= $postChanson->titreC ?></td>
-                                <td><?= $postChanson->duree ?></td>
-                                <td><?= $postChanson->auteurC ?></td>
-                                <td><?= $postChanson->noteOpinionC ?></td>
-                                <td><?= $postChanson->numA ?></td>
-                                <td><?= $postChanson->codeAlbum ?></td>
-                                <td>Ecouter</td>
-                            </tr>
-                            <tr><td colspan = "7"><hr class="separate-posts"></td></tr>
-                        <?php endforeach ?>
+                            <tr><td colspan = "8"><hr class="separate-posts"></td></tr>
+                            <?php foreach ($postsChanson as $postChanson): ?>
+                                <tr>
+                                    <td><?= $postChanson->codeChanson ?></td>
+                                    <td><?= $postChanson->titreC ?></td>
+                                    <td><?= $postChanson->duree ?></td>
+                                    <td><?= $postChanson->auteurC ?></td>
+                                    <td><?= $postChanson->noteOpinionC ?></td>
+                                    <td><?= $postChanson->numA ?></td>
+                                    <td><?= $postChanson->codeAlbum ?></td>
+                                    <td><a href="../ListenSon/son.php?listenSong=<?= sanitizeString($postChanson->codeChanson) ?>"><img src="../../img/lectureAudio.png" width="75px" height="auto"></a></td>
+                                </tr>
+                                <tr><td colspan = "8"><hr class="separate-posts"></td></tr>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>
