@@ -2,9 +2,10 @@
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
 use App\App;
+use App\Son;
 use App\Artiste;
-use App\AllInformation as getArtiste;
 use App\RechercheIn;
+use App\AllInformation as getArtiste;
 
 $user = App::getAuth()->user();
 if(!$user) {
@@ -69,7 +70,7 @@ $pages = getArtiste::$pages;
                                     <td><?= $postArtiste->prenomA ?></td>
                                     <td><img src="<?= $postArtiste->urlPhoto ?>" alt="<?= $postArtiste->urlPhoto ?>" width="300px" height="auto"></td>
                                     <td class="bio-cal"><?= $postArtiste->biographie ?></td>
-                                    <td><a href="#"><img src="../../img/lectureAudio.png" alt="lecture audio" width="150px" height="auto"></a></td>
+                                    <td><a href="../ListenSon/son.php?listenSong=<?= Son::getChansonFromArtiste($postArtiste->numA) ?>"><img src="../../img/lectureAudio.png" alt="lecture audio" width="150px" height="auto"></a></td>
                                 </tr>
                                 <tr><td colspan = "6"><hr class="separate-posts"></td></tr>
                             <?php endforeach ?>

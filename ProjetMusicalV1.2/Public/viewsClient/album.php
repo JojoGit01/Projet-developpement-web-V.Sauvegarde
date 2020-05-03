@@ -2,9 +2,10 @@
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
 use App\App;
+use App\Son;
 use App\Album;
-use App\AllInformation as getAlbum;
 use App\RechercheIn;
+use App\AllInformation as getAlbum;
 $user = App::getAuth()->user();
 if(!$user) {
     header('Location: ../../index.php');
@@ -67,7 +68,7 @@ $pages = getAlbum::$pages;
                                     <td><?= $postAlbum->nomAL ?></td>
                                     <td><?= $postAlbum->anneeSortie ?></td>
                                     <td><img src="<?= $postAlbum->urlPochette ?>" alt="image album" width="300px" height="auto"></td>
-                                    <td><a href="#">Voir album</a></td>
+                                    <td><a href="../ListenSon/son.php?listenSong=<?= Son::getChansonFromArtiste($postAlbum->codeAlbum) ?>">Voir album</a></td>
                                 </tr>
                                 <tr><td colspan = "6"><hr class="separate-posts"></td></tr>
                             <?php endforeach ?>

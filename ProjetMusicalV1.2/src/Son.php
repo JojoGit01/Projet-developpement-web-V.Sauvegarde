@@ -3,7 +3,7 @@ namespace App;
 
 class Son {
 
-    public $titreC, $codeChanson, $auteurC, $son;
+    public $titreC, $codeChanson, $auteurC, $codeAlbum, $son;
     public function __construct () {}
 
     //Récupére le son
@@ -26,10 +26,28 @@ class Son {
         return 0;
     }
 
-    public function listenOtherSong () {
+    // Récupére l'album
+    public function listenAlbum ($codeAlbum) {
         $pdo = App::getPDO();
-        $query = $pdo->prepare("SELECT * FROM chanson LIMITS 10");
+        $query = $pdo->prepare("SELECT * FROM chanson where codeAlbum = '$codeAlbum'");
         $query->execute();
-        $query->fetchAll();
+        $listenAlbum = $query->fetchAll();
+        return $listenAlbum;
+    }
+
+
+    public static function getChansonFromArtiste ($numA) {
+        $pdo = App::getPDO();
+        $selectCodeChanson = $pdo->prepare("SELECT codeChanson FROM chanson JOIN artiste ON chanson.numA = artiste.numA WHERE artiste.numA = '$numA'");
+        $selectCodeChanson->execute();
+        $getCodeChanson = (int)$selectCodeChanson->fetch()->codeChanson;
+        return $getCodeChanson;
+    }
+    public static function getChansonFromAlbum ($codeAlbum) {
+        $pdo = App::getPDO();
+        $selectCodeChanson = $pdo->prepare("SELECT codeChanson FROM chanson JOIN album ON chanson.codeAlbum = album.codeAlbum WHERE album.codeAlbum = '$codeAlbum'");
+        $selectCodeChanson->execute();
+        $getCodeChanson = (int)$selectCodeChanson->fetch()->codeChanson;
+        return $getCodeChanson;
     }
 }

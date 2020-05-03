@@ -12,6 +12,10 @@ body,html{
 /* topbar -> styleTopbar.ss */
 
 /* Pour le deroulant */
+.slideContainGalerie{
+    width:100%;
+    height: 250px;
+}
 #galerie{
     margin-top: 115px;
     position: relative;
@@ -19,27 +23,23 @@ body,html{
 #galerie img{
     position: absolute;
     display: none;
-    width: 300px;
-    height: 220px;
+    width: 220px;
+    height: 300px;
 }
 #galerie .active{
     display: block;
 }
 /*************************/
 
-.slideContainGalerie{
-    width:100%;
-    height: 250px;
-}
 
 /* body  CLient */
 .body-accueilMusical{
     width: 100%;
+    margin-top: -130px;
 }
 .presentation-accueilMusical .image-backgroundAccueil{
     height: 400px;
     background: no-repeat center center / cover url("../img/firstimg.jpg");
-    margin-top: -195px;
     margin-bottom: 25px;
 }
 .presentation-accueilMusical .title-background{

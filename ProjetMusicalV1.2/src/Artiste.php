@@ -21,4 +21,11 @@ class Artiste extends AllInformation{
         
         return $postS;
     }
+
+    public function selectImage(PDO $pdo) {
+        $selectImg = $pdo->prepare("SELECT urlPhoto FROM artiste");
+        $selectImg->execute();
+        $image = $selectImg->fetchAll();
+        return $image;
+    }
 }

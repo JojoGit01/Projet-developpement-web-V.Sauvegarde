@@ -26,7 +26,7 @@ if(User::checkIfUserCo(App::getAuth())){
                     <a href="index.php" title="Accueil Musical">Accueil</a>
                     <a href="Public/inscription.php" title="Inscription Musical">Inscription</a>
                     <a href="Public/connexion.php" title="Connexion Musical">Connexion</a>
-                    <a href="aPropos.html" title="A propos">A propos</a>
+                    <a href="#" onclick="informationLegales()" title="A propos">A propos</a>
                 </div>
             </nav>
         </header>

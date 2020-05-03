@@ -42,7 +42,7 @@ if(isset($_POST['ValiderC'])) {
                 <img src="../img/imgtop.png" alt="Image Topbar" width="150px" height="auto">
                 <div class="topbar-D">
                     <a href="../index.php" title="Accueil Musical" class="accueil">Accueil</a>
-                    <a href="#" title="A propos" class="aPropos">A propos</a>
+                    <a href="#" onclick="informationLegales()" title="A propos" class="aPropos">A propos</a>
                 </div>
             </nav>
         </header>

@@ -17,6 +17,7 @@ $listenSong = sanitizeString($_GET['listenSong']);
 $getInfo = $son->getSong($listenSong);
 $checkNum = $son->checkGet($listenSong, $getInfo);
 
+$listenAlbums = $son->listenAlbum($getInfo->codeAlbum);
 ?>
 <?php if($checkNum): ?>  
     <!DOCTYPE html>
@@ -25,6 +26,7 @@ $checkNum = $son->checkGet($listenSong, $getInfo);
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="../../Css/styleFooter.css">
+            <link rel="stylesheet" href="../../Css/styleSon.css">
             <title>Son : <?= $getInfo->titreC ?></title>
         </head>
         <body>
@@ -40,17 +42,17 @@ $checkNum = $son->checkGet($listenSong, $getInfo);
             </header>
             <div class="body-son">
                 <main class="son">
-                    <h1>Vous écouter : <?= $getInfo->titreC ?> de <?= $getInfo->auteurC ?></h1>
+                    <h1 class="title-son">Vous écouter : <?= $getInfo->titreC ?> de <?= $getInfo->auteurC ?></h1>
                     <iframe width="700px" height="400px" src="<?=$getInfo->son?>"></iframe>  
                 </main>
                 <aside class="aside-son">
-                    <div class="otherSon">
-                        <?php for($i = 0; $i < 10; $i++): ?>
+                    <div class="albumSonGetting">
+                        <h2 class="title-aside-son">Chanson Album</h2>
+                        <?php foreach ($listenAlbums as $listenAlbum): ?>
                             <ul>
-                                <li>Autre chanson : ...</li>
+                                <li class="active"><?= $listenAlbum->titreC ?> de <?= $listenAlbum->auteurC ?></li>
                             </ul>
-                            <hr>
-                        <?php endfor ?>
+                        <?php endforeach ?>
                     </div>
                 </aside>
             </div>

@@ -47,7 +47,7 @@ if(isset($_POST['ValiderI'])){
                 <div class="topbar-D">
                     <a href="../index.php" title="Accueil Musical">Accueil</a>
                     <a href="connexion.php" title="Connexion Musical">Connexion</a>
-                    <a href="#" title="A propos">A propos</a>
+                    <a href="#" onclick="informationLegales()" title="A propos">A propos</a>
                 </div>
             </nav>
         </header>
