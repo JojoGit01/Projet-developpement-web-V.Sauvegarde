@@ -4,11 +4,11 @@ require_once '../useFunction/sanitizeString.php';
 use App\App;
 use App\Inscription;
 use App\User;
-if(User::checkIfUserCo(App::getAuth())){
+if(User::checkIfUserCo(App::getAuth())) {
     header('Location: ../Public/accueilClient.php?log=1');
     exit();
 }
-if(isset($_POST['ValiderI'])){
+if(isset($_POST['ValiderI'])) {
     $name = sanitizeString(utf8_decode($_POST['nameI']));
     $prenom = sanitizeString(utf8_decode($_POST['prenomI']));
     $dateDeNaissance = sanitizeString(utf8_decode($_POST['ddnI']));
@@ -19,14 +19,14 @@ if(isset($_POST['ValiderI'])){
         $pdo = new Inscription(App::getPDO());
         $emailCheck = $pdo->checkEmail($email);
         $identifiantCheck = $pdo->checkIdentifiant($identifiant);
-        if(!$emailCheck && !$identifiantCheck){
+        if(!$emailCheck && !$identifiantCheck) {
             $pdo->sendInscription($name, $prenom, $dateDeNaissance, $email, $identifiant, $motDePasse);
         } 
         else {
             $errorIdentifiant = "Identifiant déja utilisée !";
             $errorEmail = "Email déja utilisée !";
         }
-    } catch (PDOExpression $e){
+    } catch (PDOExpression $e) {
         echo 'Connexion éhouée : ' .$e->getMessage();
     }
 }

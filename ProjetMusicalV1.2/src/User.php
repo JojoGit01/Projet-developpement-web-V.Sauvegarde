@@ -1,4 +1,6 @@
 <?php
+// Cette class permet de définir un utilsateur si il est connecté ou non connecté
+// Creator : Jonathan
 namespace App;
 use PDO;
 class User{

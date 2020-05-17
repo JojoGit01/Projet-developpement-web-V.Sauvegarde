@@ -1,7 +1,7 @@
 <?php
 namespace App;
 use PDO;
-class Album extends AllInformation{
+class Album extends AllInformation {
 
     private $codeAlbum, $nomAL, $anneeSortie, $urlPochette;
     public function __construct () {}
@@ -12,7 +12,7 @@ class Album extends AllInformation{
         $this->params = []; 
         $this->sortable = ["codeAlbum", "nomAL", "anneeSortie", "urlPochette"];
 
-        self::seekAlbum($q, "nomAL");
+        self::seekAAC($q, "nomAL", "null", "null");
         $postS = self::getInformation($sort, $dir, $p, $pdo);
         self::perPages($pdo, "codeAlbum");
         

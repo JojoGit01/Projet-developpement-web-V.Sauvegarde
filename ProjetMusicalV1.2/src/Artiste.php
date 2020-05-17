@@ -15,7 +15,7 @@ class Artiste extends AllInformation{
         $this->params = []; 
         $this->sortable = ["numA", "nomA", "prenomA", "urlPhoto", "biographie"];
         
-        self::seekAlbum($q, "nomA");
+        self::seekAAC($q, "nomA", "prenomA", "null");
         $postS = self::getInformation($sort, $dir, $p, $pdo);
         self::perPages($pdo, "numA");
         

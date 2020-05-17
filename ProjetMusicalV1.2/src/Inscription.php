@@ -19,7 +19,7 @@ class Inscription{
     public function checkIdentifiant($identifiant): bool {
         $selectIdentifiant = $this->pdo->query("SELECT * FROM compteMusical WHERE identifiantC = '$identifiant'");
         $resultIdentifiant = $selectIdentifiant->fetchAll();
-        if(!$resultIdentifiant){
+        if(!$resultIdentifiant) {
             return false;
         }
         return true;

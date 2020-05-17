@@ -77,14 +77,14 @@ $pages = getAlbum::$pages;
                 </div>
                 <div class="paps">
                     <div class="pa">
-                            <?php if ($pages > 1 && $page > 1): ?>
-                                <a href="?<?= RechercheIn::withParam($_GET, "p", $page-1) ?>">Page précédente</a>
-                            <?php endif ?>
-                        </div>
-                        <div class="ps">
-                            <?php if ($pages > 1 && $page < $pages): ?>
-                                <a href="?<?= RechercheIn::withParam($_GET, "p", $page+1) ?>">Page suivante</a>
-                            <?php endif ?>   
+                        <?php if ($pages > 1 && $page > 1): ?>
+                            <a href="?<?= RechercheIn::withParam($_GET, "p", $page-1) ?>">Page précédente</a>
+                        <?php endif ?>
+                    </div>
+                    <div class="ps">
+                        <?php if ($pages > 1 && $page < $pages): ?>
+                            <a href="?<?= RechercheIn::withParam($_GET, "p", $page+1) ?>">Page suivante</a>
+                        <?php endif ?>   
                     </div>
                 </div>
             </main>

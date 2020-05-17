@@ -12,7 +12,7 @@ class Chanson extends AllInformation{
         $this->params = []; 
         $this->sortable = ["codeChanson", "titreC", "duree", "auteurC", "noteOpinionC", "numA", "codeAlbum"];
 
-        self::seekAlbum($q, "titreC");
+        self::seekAAC($q, "auteurC", "null", "titreC");
         $postS = self::getInformation($sort, $dir, $p, $pdo);
         self::perPages($pdo, "codeChanson");
         

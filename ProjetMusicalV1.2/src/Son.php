@@ -35,7 +35,6 @@ class Son {
         return $listenAlbum;
     }
 
-
     public static function getChansonFromArtiste ($numA) {
         $pdo = App::getPDO();
         $selectCodeChanson = $pdo->prepare("SELECT codeChanson FROM chanson JOIN artiste ON chanson.numA = artiste.numA WHERE artiste.numA = '$numA'");

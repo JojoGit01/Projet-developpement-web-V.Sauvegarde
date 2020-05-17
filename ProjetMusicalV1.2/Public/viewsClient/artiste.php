@@ -47,7 +47,7 @@ $pages = getArtiste::$pages;
                 <h1 class="artiste-title">Artiste Musical</h1>
                 <div class="rechercher">
                     <form action="" method="get">
-                        <input type="text" name="q" placeholder="Recherche par nom" value="<?= sanitizeString($_GET['q'] ?? null) ?>"/>
+                        <input type="text" name="q" placeholder="Recherche par nom ou prénom" value="<?= sanitizeString($_GET['q'] ?? null) ?>"/>
                     </form>
                 </div>
                 <div class="table-artiste">

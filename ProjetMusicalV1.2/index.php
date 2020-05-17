@@ -3,7 +3,7 @@ require_once 'vendor/autoload.php';
 use App\User;
 use App\App;
 // Vérifie si l'utilisateur ne s'est pas déja connecter //
-if(User::checkIfUserCo(App::getAuth())){
+if(User::checkIfUserCo(App::getAuth())) {
     header('Location: Public/accueilClient.php?login=1');
     exit();
 }
@@ -48,7 +48,7 @@ if(User::checkIfUserCo(App::getAuth())){
                         <div class="presentation-Musical">
                             <ul>
                                 <li>Un environnement de musique </li>
-                                <li>Decouverte d'album</li>
+                                <li>Découverte d'album</li>
                                 <li>Musique illimiter</li>
                                 <li>Rechercher ce que vous voulez</li>
                                 <li>Et bien sur gratuit</li>

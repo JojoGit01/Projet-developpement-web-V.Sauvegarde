@@ -1,19 +1,30 @@
 <?php
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
-
 use App\App;
 $user = App::getAuth()->user();
 if(!$user) { header('Location: ../connexion.php'); }
 if (isset($_POST['sendMessage'])) {
     $option = sanitizeString($_POST['optionContact']);
     $message = sanitizeString($_POST['message']);
-    if (strlen($message) < 1000){
-        $pdo = App::getPDO();
-        $send = $pdo->prepare("INSERT INTO contact VALUES (emailC, nomC, prenomC, optionC, messageC) VALUES ('$user->emailC', '$user->nomC', '$user->prenomC', '$option', '$message')");
-        $send->execute();
+    $message = strtr($message,[ "'" => "''" ]);
+    $date = date("Y/m/d");
+    if (strlen($message) >= 10) {
+        if (strlen ($message) <= 1000) {
+            $pdo = App::getPDO();
+            $send = $pdo->prepare("INSERT INTO contact (identifiantC, optionC, messageC, dateC) VALUES ('$user->identifiantC', '$option', '$message', '$date')");
+            $send->execute([
+                'contact' => $user->identifiantC,
+                'optionC' => $option,
+                'messageC' => $message,
+                'dateC' => $date
+            ]);
+            $succes = "Votre message à été envoyer !";
+        } else {
+            $errorBig = "Votre message est trop long";
+        }
     } else {
-        $error = "Votre message est trop long";
+        $errorSmall = "Votre message est trop court";
     }
 }
 ?>
@@ -41,9 +52,15 @@ if (isset($_POST['sendMessage'])) {
                 <form action="" method="post">
                     <fieldset class="fieldset-contact">
                         <legend>Contactez nous</legend>
-                        <div class="error">
+                        <div class="error/succes">
+                            <?php if(strlen($message) < 10): ?>
+                                <?= $errorSmall ?>
+                            <?php endif ?>
                             <?php if(strlen($message) > 1000): ?>
-                                <?= $error ?>
+                                <?= $errorBig ?>
+                            <?php endif ?>
+                            <?php if(strlen($message) > 10 || strlen($message) < 1000): ?>
+                                <?= $succes ?>
                             <?php endif ?>
                         </div>
                         <div class="optionContact">

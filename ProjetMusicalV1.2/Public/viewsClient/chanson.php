@@ -47,7 +47,7 @@ $pages = getChanson::$pages;
                 <h1 class="chanson-title">Chanson Musical</h1>
                 <div class="rechercher">
                 <form action="">
-                    <input type="text" name="q" placeholder="Recherche par titre" value="<?= sanitizeString($_GET['q'] ?? null) ?>"/>
+                    <input type="text" name="q" placeholder="Recherche par titre ou auteur" value="<?= sanitizeString($_GET['q'] ?? null) ?>"/>
                 </form>
                 </div>
                 <div class="table-chanson">

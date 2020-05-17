@@ -51,6 +51,12 @@ CREATE TABLE noter (
     PRIMARY KEY(codeChanson, identifiantC)
 );
 
+CREATE TABLE contact (
+    identifiantC VARCHAR(300) NOT NULL,
+    optionC VARCHAR(100) NOT NULL,
+    messageC VARCHAR(1000) NOT NULL,
+    dateC DATE NOT NULL
+);
 
 
 /* 
@@ -105,7 +111,177 @@ VALUES
 ('Modern Love', '00:03:49', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/HivQqTtiHVw'),
 ('The Payback', '00:07:39', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/istJXUJJP0g'),
 ('Jamming', '00:03:20', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/oFRbZJXjWIA'),
-('Come Together', '00:04:20', '	John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/45cYwDMibGo'),
+('Come Together', '00:04:20', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/45cYwDMibGo'),
 ('Amigo', '00:04:04', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/eUgZZiPbXxg'),
+
+
+('Together', '00:03:48', 'Marshmello', '5', '1', '1',       'https://www.youtube.com/embed/JePnQ1gSagc'),
+('Rooftops', '00:03:04', 'Marshmello', '5', '1', '1',       'https://www.youtube.com/embed/1N3vUlC5354'),
+('Check This Out', '00:03:13', 'Marshmello', '5', '1', '1', 'https://www.youtube.com/embed/D8tA6KGgmJE'),
+('Flashbacks', '00:02:45', 'Marshmello', '5', '1', '1',     'https://www.youtube.com/embed/Lj-_mD0w474'),
+('Tell Me', '00:02:39', 'Marshmello', '5', '1', '1',        'https://www.youtube.com/embed/x3y4WdN4PI8'),
+('Paralyzed', '00:03:10', 'Marshmello', '5', '1', '1',      'https://www.youtube.com/embed/bYiAspDYNgU'),
+('Power', '00:02:52', 'Marshmello', '5', '1', '1',          'https://www.youtube.com/embed/KUaVjms6yyY'),
+('Imagine', '00:02:55', 'Marshmello', '5', '1', '1',        'https://www.youtube.com/embed/dUweAQ38Ed8'),
+
+
+("Regarde-nous", '00:03:33', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/g26R1RC_tg4'),
+("Rester vivant", '00:04:37', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/K1WEkxzgqRQ'),
+("Seul", '00:03:40', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/SrhesRJdsWM'),
+("Au café de l'avenir", '00:04:11', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/K5A03tm_JS8'),
+("Une lettre à l'enfant que j'étai", '00:03:35', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/0woJBcmxmD0'),
+("J'tai même pas dit merci", '00:05:17', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/8C5uSq1Y4A8'),
+("Si j'avais su la vie", '00:03:44', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/x5N65RhcdH4'),
+("On s'habitue à tout", '00:03:39', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/6U_SQJowAMk'),
+("Te manquer", '00:04:41', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/48LzuCWr_qI'),
+("Te voir grandir", '00:03:22', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/y2DhmmvLfPM'),
+("À nos promesses", '00:03:59', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/rfEpq5UEdxI'),
+("Chanteur de chansons", '00:03:33', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/l9I0uFKX-zQ'),
+("On s'accroche", '00:03:05', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/2CxcvqpPLng'),
+("Je t'attendrai", '00:03:48', 'Johnny Hallyday','5', '2', '2', 'https://www.youtube.com/embed/bxg8WRaZfb8'),
+
+
+
+
+('Piranhas', '00:04:08', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/o_tuNE5ei9o'),
+('Avec le temps', '00:04:15', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/OwsEXKn2Rlk'),
+('Dopé', '00:03:50', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/K2wzwBUhVlE'),
+('Fly', '00:03:35', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/7uVZ1HHp00g'),
+('Invincible ', '00:04:49', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/L_wFlBGwIkk'),
+('Kamarades', '00:04:16', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/lF-dWfG7QfA'),
+('Interlude', '00:02:34', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/0_d1GrvCluc'),
+("C'est la vie", '00:03:59', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/sgGaNAxzz3s'),
+('Regarde-moi', '00:04:35', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/iAdOjMbMMzI'),
+('Halloween', '00:04:37', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/1t-iO0koIGQ'),
+('Sale Sud Anthem', '00:03:58', 'Soprano', '5', '3', '3', 'https://www.youtube.com/embed/Bs_8TdfOFlU'),
+
+
+('Legendary Lovers', '00:03:44', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/2t2WLGW2Kvs'),
+('Birthday', '00:03:35', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/C8nmKMBgrFI'),
+('Walking on Air', '00:03:42', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/t4D5egXVqSg'),
+('Unconditionally', '00:03:49', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/kWKoOlksycA'),
+('Dark Horse', '00:03:35', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/F7VBnbt0_-w'),
+('This Is How We Do', '00:03:24', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/NIWOv6yiorE'),
+('International Smile', '00:03:48', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/MbgqBjF_CSE'),
+('Ghost', '00:03:23', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/1Y2RCpL-cN4'),
+('Love Me', '00:03:53', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/cs70lPVw_Fs'),
+('This Moment', '00:03:47', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/8gslblqGkWI'),
+('Double Rainbow', '00:03:52', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/JvivlCTnu78'),
+('By the Grace of God', '00:04:28', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/HfIZ7WXvDxo'),
+('Spiritual', '00:04:36', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/p-T3Zv_1vdQ'),
+('It Takes Two', '00:03:54', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/QABAMRwe53Q'),
+('Choose Your Battles', '00:04:27', 'Katy Perry', '5', '4', '4', 'https://www.youtube.com/embed/InWVBB9UCqQ'),
+
+
+('Tant pis', '00:03:49', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/MBotef6Af9w'),
+('Caméléon', '00:03:26', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/_JwpG_rRkHs'),
+('Fuegolando', '00:03:01', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/GT3wNLS98IM'),
+('La Même', '00:03:20', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/fC6YV65JJ6g'),
+('Loup-garou', '00:03:58', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/LLK3Jit-sWk'),
+("Entre nous c'est mort", '00:03:38', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/e_8yA9LD_oY'),
+('Laissez-moi tranquille', '00:03:28', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/6fP5irHryt4'),
+('Mi Gna', '00:03:35', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/NtccSFkAhrM'),
+('Tu reviendras', '00:03:29', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/3yv5x7xE3j0'),
+('Nos valeurs', '00:03:56', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/Oac96ew0wjU'),
+('Tu ne le vois pas', '00:04:22', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/CTTth1-G2o4'),
+('Merci Maman', '00:02:55', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/gEVVOVvxrNc'),
+("T'es partie", '00:03:57', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/GiEf37zX8yA'),
+("Tu m'as dit", '00:03:55', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/sPHVY6QGKwA'),
+('Oulala', '00:03:01', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/mUG23j1r7Ak'),
+('Bonita', '00:03:34', 'Gims', '5', '5', '5', 'https://www.youtube.com/embed/yN80UcVuAXE'),
+
+
+("Saint-Tropez", '00:02:30', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/le3l_6K6U0E'),
+("Enemies", '00:03:16', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/qT_y5Yc8jSA'),
+("Allergic", '00:02:36', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/JdttvuGdlvs'),
+("A Thousand Bad Times", '00:03:41', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/ul-9U681Y2c'),
+("Circles", '00:03:46', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/wXhTHyIgQ_U'),
+("Die for Me", '00:04:05', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/I_QpDE-Uco0'),
+("On the Road", '00:03:38', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/yw_ShLNyHTk'),
+("Take What You Want", '00:03:49', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/LYa_ReqRlcs'),
+("I'm Gonna Be", '00:03:20', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/s1XbPXdgEEA'),
+("Staring at the Sun", '00:02:48', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/Wq6EeYFiAZU'),
+("Sunflower", '00:02:38', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/z9VMaLxg9Ok'),
+("Internet", '00:02:03', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/weXNuvoyEr0'),
+("Goodbyes", '00:02:56', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/YgKDE5eYNqc'),
+("Myself", '00:02:38', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/gqthPT8vK7o'),
+("I Know", '00:02:21', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/k7fiZ_if2Bg'),
+("Wow", '00:02:29', 'Post Malone', '5', '6', '6', 'https://www.youtube.com/embed/NA4uIFbVCPM'),
+
+
+('Carousel', '00:03:50', 'Melanie Martinez', '5', '7', '7', 'https://www.youtube.com/embed/zAB5AC9yhY0'),
+('Dead to Me', '00:03:30', 'Melanie Martinez', '5', '7', '7', 'https://www.youtube.com/embed/s2N_-TJUE_w'),
+('Bittersweet Tragedy', '00:04:49', 'Melanie Martinez', '5', '7', '7', 'https://www.youtube.com/embed/Y9bETCh68c4'),
+
+
+('China Girl', '00:04:06', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/_YC3sTbAPcU'),
+("Let's Dance", '00:07:38', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/gHlwJvPv9C0'),
+('Without You', '00:03:08', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/nXoD5Gz-Aak'),
+('Ricochet', '00:05:14', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/YOKA-e4MWPo'),
+('Criminal World', '00:04:25', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/oUbLegcKgIc'),
+('Cat People', '00:05:09', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/m0ODoeBc04g'),
+('Shake It', '00:03:52', 'David Bowie', '5', '8', '8', 'https://www.youtube.com/embed/jsQkWanuDOA'),
+
+
+('Doing the Best I Can', '00:07:42', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/DRLNwl3-SJE'),
+('Take Some...Leave Some', '00:08:33', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/4k1V0w7-Xrs'),
+('Shoot Your Shot', '00:08:09', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/r16GK_zm7sc'),
+('Forever Suffering', '00:05:52', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/qGdQs5nn_Ug'),
+('Time Is Running out Fast', '00:12:47', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/Oklr8eOwsVI'),
+('Stone to the Bone', '00:10:14', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/QON_23CPKQQ'),
+('Mind Power', '00:12:04', 'James Brown', '5', '9', '9', 'https://www.youtube.com/embed/7naR12OPxRw'),
+
+
+('Exodus', '00:07:40', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/HmLNHVBhEjA'),
+('Redemption Song', '00:03:53', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/1A95dcLxAuA'),
+('Coming in from the Cold', '00:04:31', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/EF0Jtl-dpyE'),
+('Could You Be Loved', '00:03:57', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/zBqW6yKz8WA'),
+('Is This Love', '00:03:54', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/69RdQFDuYPI'),
+('Work', '00:03:41', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/NKHdvDkDAHk'),
+('Get Up, Stand Up', '00:03:10', 'Bob Marley', '5', '10', '10', 'https://www.youtube.com/embed/O8ECZOPgId0'),
+
+
+('Something', '00:03:02', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/MZ3Vh8jZFdE'),
+("Maxwell's Silver Hammer", '00:03:27', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/mJag19WoAe0'),
+('Oh! Darling', '00:03:26', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/9BznFjbcBVs'),
+("Octopus's Garden", '00:02:51', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/De1LCQvbqV4'),
+('I Want You', '00:07:47', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/tAe2Q_LhY8g'),
+('Here Comes the Sun', '00:03:05', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/xUNqsfFUwhY'),
+('Because', '00:02:45', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/hL0tnrl2L_U'),
+('You Never Give Me Your Money', '00:04:02', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/BpndGZ71yww'),
+('Sun King', '00:02:25', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/6bNMxWGHlTI'),
+('Mean Mr. Mustard', '00:01:06', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/oMarHac3VpQ'),
+('Polythene Pam', '00:01:12', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/Cb0dTdTeHMU'),
+('She Came In Through the Bathroom Window', '00:01:58', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/NVv7IzEVf3M'),
+('Golden Slumbers', '00:01:31', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/AcQjM7gV6mI'),
+('Carry That Weight', '00:01:36', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/6B224XDJw6g'),
+('The End', '00:02:05', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/12R4FzIhdoQ'),
+('Her Majesty', '00:00:23', 'John Lennon', '5', '11', '11', 'https://www.youtube.com/embed/Mh1hKt5kQ_4'),
+
+
+('Henrico', '00:03:49', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/CGg8fZ1LUFI'),
+('Délicieuse', '00:04:04', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/e21P62KZqAM'),
+('Tu mentiras', '00:03:40', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/yxvb7LLVh5k'),
+('La tête dans les nuages', '00:03:43', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/d1MYi2-SSmk'),
+('Ou lalala', '00:03:36', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/Utc4PS47esI'),
+("Je vais t'oublier", '00:02:54', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/rTKoFEEJnaw'),
+("Je traîne seul", '00:03:57', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/r9EiQSQsWS0'),
+("Comme les gens d'ici", '00:03:10', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/7echk8kqtJw'),
+("Fratellu", '00:03:54', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/X5i5gANNc4k'),
+('Madame', '00:04:01', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/eH_DVHr37M4'),
+('Le jaloux', '00:04:27', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/jmVXFufyHZ4'),
+('Je ne vous oublie pas', '00:04:42', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/PNpe_7MtM84'),
+('Je ne veux pas partir', '00:04:11', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/HdvxmubFypo'),
+('Samantha', '00:04:17', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/9dz78yQcJ3I'),
+('Facilement', '00:03:21', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/PtylfuNogG4'),
+('Comme un fou', '00:03:16', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/S2ZwocpPRLk'),
+('Mauvaise journée', '00:04:25', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/EYcHCt2Y3NM'),
+("Temps d'avant", '00:05:41', 'Jul', '5', '12', '12', 'https://www.youtube.com/embed/rRuwrwZZXvY'),
+
+
+
+
+
+
 
 

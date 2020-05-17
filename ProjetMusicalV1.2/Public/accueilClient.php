@@ -10,8 +10,13 @@ if(!$user) {
 $imageArtiste = new Artiste();
 $images = $imageArtiste->selectImage(App::getPDO());
 
-if(isset($_POST['envoyerComment'])) {
-    
+if (isset($_POST['sendRecherche'])) {
+    $rechercheOption =  sanitizeString($_POST['rechercherPar']);
+    $recherche = sanitizeString($_POST['rechercherOut']);
+
+    $rechercheOption === "Artiste" ? header("Location: viewsClient/artiste.php?q=$recherche") : null;
+    $rechercheOption === "Album" ? header("Location: viewsClient/album.php?q=$recherche") : null;
+    $rechercheOption === "Chanson" ? header("Location: viewsClient/chanson.php?q=$recherche") : null;
 }
 ?>
 <!DOCTYPE html>
@@ -86,6 +91,7 @@ if(isset($_POST['envoyerComment'])) {
                         </div>
                     </div>
                     <hr class="separate">
+                    <!--
                     <div class="site-message">
                         <div class="comments">
                             <form action="" method="post">
@@ -107,24 +113,29 @@ if(isset($_POST['envoyerComment'])) {
                             </div>
                         </div>
                     </div>
+                    -->
                 </main>
                 <hr class="separate-main-aside">
                 <aside class="aside-accueilMusical">
                     <div class="image-recherche-back">
                         <form action="" method="post">
                             <div class="search">
-                                <h4>Faire une recherche</h4>
+                                <h2>Faire une recherche</h2>
                                 <div class="rechercheAAT">
                                     <div class="recherchePrecise">
-                                        <label>Recherche précise : </label>
-                                        <select name="recherchePar" value="<?php sanitizeString($_POST['rechercherPar']) ?>">
+                                        <label>Vous rechercher : </label>
+                                        <select name="rechercherPar" value="<?php sanitizeString($_POST['rechercherPar']) ?>" required>
                                             <option>Artiste</option>
                                             <option>Album</option>
                                             <option>Chanson</option>
                                         </select>
                                     </div>
                                     <div class="doRecherche">
-                                        <input type="text" name="rechercheOut" value="<?php sanitizeString($_POST['rechercherOut']) ?>">
+                                        <label for="rechercheOut">Votre recherche :</label>
+                                        <input type="text" name="rechercherOut" value="<?php sanitizeString($_POST['rechercherOut']) ?>" placeholder="Titre / Nom" required>
+                                    </div>
+                                    <div class="buttonR">
+                                        <input type="submit" name="sendRecherche" id="sendRecherche" value="Rechercher">
                                     </div>
                                 </div>
                             </div>

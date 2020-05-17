@@ -19,11 +19,13 @@ class AllInformation{
     public static $pages;
 
     //Function important
-    protected function seekAlbum($q, $nomR) {
+    protected function seekAAC($q, $nomR, $prenomR, $titreR) {
         if(!empty($q)) {
-            $this->query .= " WHERE $nomR like :$nomR";
-            $this->queryCount .= " WHERE $nomR like :$nomR";
+            $this->query .= " WHERE $nomR like :$nomR OR $prenomR like :$prenomR OR $titreR like :$titreR";
+            $this->queryCount .= " WHERE $nomR like :$nomR OR $prenomR like :$prenomR OR $titreR like :$titreR";
             $this->params[$nomR] = '%' . $q . '%';
+            $this->params[$prenomR] = '%' . $q . '%';
+            $this->params[$titreR] = '%' . $q . '%';
         }
     }
 

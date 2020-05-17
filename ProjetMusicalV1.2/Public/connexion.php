@@ -16,9 +16,9 @@ if(User::checkIfUserCo($auth)){
 if(isset($_POST['ValiderC'])) {
     $username = sanitizeString($_POST['username']);
     $password = sanitizeString($_POST['password']);
-    if(!empty($_POST)){
+    if(!empty($_POST)) {
         $user = $auth->login($username, $password);
-        if($user){
+        if($user) {
             header('Location: accueilClient.php?login=1');
             exit();
         }
