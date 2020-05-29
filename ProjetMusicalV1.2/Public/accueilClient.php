@@ -1,3 +1,4 @@
+<!-- Creator: Jonathan -->
 <?php
 require_once '../useFunction/sanitizeString.php';
 require_once '../vendor/autoload.php';
@@ -48,8 +49,8 @@ if (isset($_POST['sendRecherche'])) {
 
         <div class="body-accueilMusical">
             <div class="presentation-accueilMusical">
-                <h2 class="title-background">Bienvenue <?= $user->identifiantC ?></h2>
                 <div class="image-backgroundAccueil"></div>
+                <h1 class="title-background">Bienvenue <?= $user->identifiantC ?></h1>
             </div>
             <div class="container-accueilMusical">
                 <main class="main-accueilMusical">
@@ -91,39 +92,16 @@ if (isset($_POST['sendRecherche'])) {
                         </div>
                     </div>
                     <hr class="separate">
-                    <!--
-                    <div class="site-message">
-                        <div class="comments">
-                            <form action="" method="post">
-                                <fieldset class="fieldset">
-                                    <legend>Laisser nous un commentaire</legend>
-                                    <label for="commentaire"></label>
-                                    <textarea class="comment" id="comment" name="comment" rows = "10" cols="50" placeholder="Laisser un commentaire"></textarea>
-                                    <input type="submit" id="envoyerComment" name="envoyerComment" value="Envoyer commentaire">
-                                </fieldset>
-                            </form>
-                            <div class="commentUtilisateur">
-                                <h2>Commentaire de Musical</h2>
-                                <div class="getComment">
-                                    <ul>
-                                        <li>Utilisateur : <?= $get->identifiantC ?></li>
-                                        <li>Message : </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
                 </main>
                 <hr class="separate-main-aside">
                 <aside class="aside-accueilMusical">
                     <div class="image-recherche-back">
                         <form action="" method="post">
                             <div class="search">
-                                <h2>Faire une recherche</h2>
+                                <h2 class="title-recherche">Faire une recherche</h2>
                                 <div class="rechercheAAT">
                                     <div class="recherchePrecise">
-                                        <label>Vous rechercher : </label>
+                                        <label><strong>Vous rechercher</strong></label>
                                         <select name="rechercherPar" value="<?php sanitizeString($_POST['rechercherPar']) ?>" required>
                                             <option>Artiste</option>
                                             <option>Album</option>
@@ -131,8 +109,8 @@ if (isset($_POST['sendRecherche'])) {
                                         </select>
                                     </div>
                                     <div class="doRecherche">
-                                        <label for="rechercheOut">Votre recherche :</label>
-                                        <input type="text" name="rechercherOut" value="<?php sanitizeString($_POST['rechercherOut']) ?>" placeholder="Titre / Nom" required>
+                                        <label for="rechercheOut"><strong>Votre recherche</strong></label>
+                                        <input type="text" name="rechercherOut" value="<?php sanitizeString($_POST['rechercherOut']) ?>" placeholder="Artiste / Album / Chanson" required>
                                     </div>
                                     <div class="buttonR">
                                         <input type="submit" name="sendRecherche" id="sendRecherche" value="Rechercher">

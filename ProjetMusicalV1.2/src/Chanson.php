@@ -1,4 +1,5 @@
 <?php
+//Creator : Jonathan
 namespace App;
 use PDO;
 class Chanson extends AllInformation{
@@ -20,8 +21,7 @@ class Chanson extends AllInformation{
     }
 
     // Pour les notes //
-    public static function getChanson() {
-        $pdo = App::getPDO();
+    public static function getChanson(PDO $pdo) {
         $select = $pdo->prepare("SELECT titreC FROM chanson");
         $select->execute();
         $selectTitre = $select->fetchAll();

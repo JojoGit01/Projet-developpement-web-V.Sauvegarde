@@ -1,4 +1,6 @@
 <?php
+//Creator : Jonathan
+//Page principal
 require_once 'vendor/autoload.php';
 use App\User;
 use App\App;

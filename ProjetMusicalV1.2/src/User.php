@@ -15,24 +15,27 @@ class User{
 
     public function __construct () {}
 
+    //Vérifier si l'utilisateur n'est pas déja connecter.
     public static function checkIfUserCo(Auth $auth): bool {
-        if($auth->user() !== null){
+        if($auth->user() !== null) {
             return true;
         }
         return false;
     }
 
-    public static function checkIdentifiant (string $identifiantC) {
+    //Vérification de l'identifiant et de l'id .
+    public static function check ($idC, $nameID) {
         $pdo = App::getPDO();
-        $query = $pdo->prepare("SELECT * FROM compteMusical WHERE identifiantC = '$identifiantC'");
-        $query->execute([$identifiantC]);
+        $query = $pdo->prepare("SELECT * FROM compteMusical WHERE $nameID = '$idC'");
+        $query->execute([$nameID]);
         return $query->fetchObject(__CLASS__);
     }
-
-    public static function checkID($idCompteC){
-        $pdo = App::getPDO();
-        $query = $pdo->prepare("SELECT * FROM compteMusical WHERE idCompteC = ?");
-        $query->execute([$idCompteC]);
-        return $query->fetchObject(__CLASS__);
+    public static function checkIdentifiant (string $identifiantC) {
+        $nameID = "identifiantC";
+        return self::check($identifiantC, $nameID);
+    }
+    public static function checkID($idCompteC) {
+        $nameID = "idCompteC";
+        return self::check($idCompteC, $nameID);
     }
 }

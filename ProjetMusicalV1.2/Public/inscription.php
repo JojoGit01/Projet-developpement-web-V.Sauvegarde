@@ -1,9 +1,11 @@
+<!-- Creator: Jonathan -->
 <?php
 require_once '../vendor/autoload.php';
 require_once '../useFunction/sanitizeString.php';
 use App\App;
 use App\Inscription;
 use App\User;
+//Vérifier que l'utilisateur n'est pas déja connecter
 if(User::checkIfUserCo(App::getAuth())) {
     header('Location: ../Public/accueilClient.php?log=1');
     exit();
@@ -17,7 +19,9 @@ if(isset($_POST['ValiderI'])) {
     $motDePasse = sanitizeString(utf8_decode($_POST['passwordI']));
     try {
         $pdo = new Inscription(App::getPDO());
+        //Vérifier que l'email n'existe pas dans la base de donnée.
         $emailCheck = $pdo->checkEmail($email);
+        //Vérifier que l'identifiant n'existe pas dans la base de donnée.
         $identifiantCheck = $pdo->checkIdentifiant($identifiant);
         if(!$emailCheck && !$identifiantCheck) {
             $pdo->sendInscription($name, $prenom, $dateDeNaissance, $email, $identifiant, $motDePasse);

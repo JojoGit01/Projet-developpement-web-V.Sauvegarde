@@ -8,4 +8,4 @@ function imageGalerie(){
     });
 }
 // setInterval(<function>, <temps en ms>)
-setInterval('imageGalerie()', 2500);    
+setInterval('imageGalerie()', 10000);    

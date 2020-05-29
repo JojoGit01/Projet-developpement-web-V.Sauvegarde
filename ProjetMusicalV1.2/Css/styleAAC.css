@@ -72,6 +72,9 @@ body,html {
     margin-top: 20px;
     font-size: 25px;
 }
+.paps .pa{
+    margin-bottom: 10px;
+}
 .paps .pa a, .paps .ps a{
     text-decoration: none;
     text-align: center;

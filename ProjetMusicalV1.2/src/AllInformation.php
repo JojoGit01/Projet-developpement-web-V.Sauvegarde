@@ -1,4 +1,5 @@
 <?php
+//Creator : Jonathan
 // Fichier qui est un extend //
 // Fichier important pour afficher les albums/artiste/chanson //
 namespace App;
@@ -60,6 +61,4 @@ class AllInformation{
         $count = (int)$statement->fetch()->$code;
         self::$pages = ceil($count / self::$PER_PAGE); 
     }
-
-
 }

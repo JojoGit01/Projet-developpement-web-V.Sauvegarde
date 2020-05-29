@@ -1,3 +1,4 @@
+<!-- Creator: Jonathan -->
 <?php
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
@@ -35,6 +36,7 @@ if (isset($_POST['sendMessage'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="../../Js/footerInformation/information.js"></script>
         <link rel="stylesheet" href="../../Css/styleFooter.css">
+        <link rel="stylesheet" href="../../Css/styleContact.css">
         <title>Contacter nous</title>
     </head>
     <body>
@@ -52,7 +54,7 @@ if (isset($_POST['sendMessage'])) {
                 <form action="" method="post">
                     <fieldset class="fieldset-contact">
                         <legend>Contactez nous</legend>
-                        <div class="error/succes">
+                        <div class="error_succes">
                             <?php if(strlen($message) < 10): ?>
                                 <?= $errorSmall ?>
                             <?php endif ?>

@@ -1,34 +1,35 @@
 <?php
+//Creator : Jonathan
 namespace App;
 use PDO;
 use App\App;
+$pdo = App::getPDO();
 
 class Note{
 
     public $codeChanson, $identifiantC, $note, $titreC;
     public function __construct () {}
 
+    //Vérifier que la note est entre 0 et 5
     public function noteBewteen0_5 ($noteNumber) : bool {    
         $noteNumber > 5 || $noteNumber < 0 ?  $error = false : $error = true;
         return $error;
     }
 
+    //Récupére le titre de la chanson
     public function recupereTitre($titreC) {
-        $pdo = App::getPDO();
-        $selectNumber = $pdo->prepare("SELECT codeChanson FROM chanson WHERE titreC = '$titreC'");
+        $selectNumber = App::getPDO()->prepare("SELECT codeChanson FROM chanson WHERE titreC = '$titreC'");
         $selectNumber->execute();
-        $numberTitreC = (int)$selectNumber->fetch()->codeChanson;
-        return $numberTitreC;
+        return (int)$selectNumber->fetch()->codeChanson;
     }
 
     public static $getUserNote;
     public function checkUserNote($idChanson, $identifiantU) {
-        $pdo = App::getPDO();
-        $selectLigneNumber = $pdo->prepare("SELECT COUNT(*) as getNote FROM noter WHERE codeChanson = '$idChanson' AND identifiantC = '$identifiantU'");
+        $selectLigneNumber = App::getPDO()->prepare("SELECT COUNT(*) as getNote FROM noter WHERE codeChanson = '$idChanson' AND identifiantC = '$identifiantU'");
         $selectLigneNumber->execute();     
 
         $getLigneNumber = (int)$selectLigneNumber->fetch()->getNote;
-        $selectNote = $pdo->prepare("SELECT note FROM noter WHERE codeChanson = '$idChanson' AND identifiantC = '$identifiantU'");   
+        $selectNote = App::getPDO()->prepare("SELECT note FROM noter WHERE codeChanson = '$idChanson' AND identifiantC = '$identifiantU'");   
         $selectNote->execute();
         self::$getUserNote = (int)$selectNote->fetch()->note;
         if($getLigneNumber === 0){
@@ -38,14 +39,13 @@ class Note{
             //Note existante
             return true;
         }
-        // Dans tous les cas retourne true // NO-BUG //
-        return true;
-        
+        // Dans les cas existant retourne true // NO-BUG //
+        return true;   
     }
 
+    //Insérer la note
     public function insertNote($codeChanson, $idUser, $note){
-        $pdo = App::getPDO();
-        $insertNote = $pdo->prepare("INSERT INTO noter (codeChanson, identifiantC, note) VALUES ('$codeChanson', '$idUser', '$note')");
+        $insertNote = App::getPDO()->prepare("INSERT INTO noter (codeChanson, identifiantC, note) VALUES ('$codeChanson', '$idUser', '$note')");
         $insertNote->execute([
             'codeChanson' => $codeChanson,
             'identifiantC' => $idUser,
@@ -53,11 +53,9 @@ class Note{
         ]);
     }
 
-
     // Pour modifier la note //
     public function userHaveNote($user) {
-        $pdo = App::getPDO();
-        $selectCountNoteHave = $pdo->prepare("SELECT COUNT(note) as noteHave FROM noter WHERE identifiantC = '$user'");
+        $selectCountNoteHave = App::getPDO()->prepare("SELECT COUNT(note) as noteHave FROM noter WHERE identifiantC = '$user'");
         $selectCountNoteHave->execute(); 
         $getCountUserNote = (int)$selectCountNoteHave->fetch()->noteHave;
         if($getCountUserNote >= 1) {
@@ -66,29 +64,24 @@ class Note{
         return false;
     }
 
+    //Vérifie si l'utilisateur a déja noter une chanson
     public function getUserHaveNote($user) {
-        $pdo = App::getPDO();
-        $selectNoteUser = $pdo->prepare("SELECT * FROM noter JOIN chanson ON noter.codeChanson = chanson.codeChanson WHERE identifiantC = '$user'");
+        $selectNoteUser = App::getPDO()->prepare("SELECT * FROM noter JOIN chanson ON noter.codeChanson = chanson.codeChanson WHERE identifiantC = '$user'");
         $selectNoteUser->execute();
-        $getAll = $selectNoteUser->fetchAll();
-        return $getAll;
+        return $selectNoteUser->fetchAll();
     }
 
+    //Récupérer la note qui à était changer
     public function getNewNote($codeChanson, $newNote, $user) {
-        $pdo = App::getPDO();
-        $updateNote = $pdo->prepare("UPDATE noter SET note = '$newNote' WHERE codeChanson = '$codeChanson' AND identifiantC = '$user'");
+        $updateNote = App::getPDO()->prepare("UPDATE noter SET note = '$newNote' WHERE codeChanson = '$codeChanson' AND identifiantC = '$user'");
         $updateNote->execute();
         return true;
     }
 
-
     // Afficher les notes des utilisateur //
     public function selectAllNote() {
-        $pdo = App::getPDO();
-        $selectAll = $pdo->prepare("SELECT * FROM noter JOIN chanson ON noter.codeChanson = chanson.codeChanson");
+        $selectAll = App::getPDO()->prepare("SELECT * FROM noter JOIN chanson ON noter.codeChanson = chanson.codeChanson");
         $selectAll->execute();
-        $getAll = $selectAll->fetchAll();
-        return $getAll;
+        return $selectAll->fetchAll();
     }
-
 }

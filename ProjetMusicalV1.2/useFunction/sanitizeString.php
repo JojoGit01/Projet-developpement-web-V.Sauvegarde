@@ -1,5 +1,6 @@
 <?php
 /*
+    - Creator : Jonathan
     - Ce code permet de sanitize les données rentrées par l'utilisateur
 */
 // Sanitize les données //

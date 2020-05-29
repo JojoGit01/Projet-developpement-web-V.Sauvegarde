@@ -1,3 +1,4 @@
+<!-- Creator: Jonathan -->
 <?php
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
@@ -12,25 +13,23 @@ if(!$user) {
     header('Location: ../../index.php');
 }
 
-$chansons = Chanson::getChanson();
+$chansons = Chanson::getChanson(App::getPDO());
 $note = new Note();
 
 // Envoyer note
 if(isset($_POST['sendNote'])) {
-    $checkNote = $note->noteBewteen0_5($_POST['noteNumber']);
-    if($checkNote) {
-        //Récupére le numero de la chanson
-        $codeChanson = $note->recupereTitre($_POST['titreC']); 
-        $checkUserNote = $note->checkUserNote($codeChanson, $user->identifiantC);
-        if(!$checkUserNote) {
-            $note->insertNote($codeChanson, $user->identifiantC, $_POST['noteNumber']);
-            $success = "Votre note à été transmis";
-        } else {
-            $errorUser = "Vous avez déja noter cette chanson : " . $_POST['titreC'] . ".<br> Vous avez mis : " . Note::$getUserNote . " / 5 .";
-        }
-    } else {
-        $error = "Nombre compris entre 0 et 5";
-    }
+    if (!empty($_POST['noteNumber'])) {
+        $checkNote = $note->noteBewteen0_5($_POST['noteNumber']);
+        if($checkNote) {
+            //Récupére le numero de la chanson
+            $codeChanson = $note->recupereTitre($_POST['titreC']); 
+            $checkUserNote = $note->checkUserNote($codeChanson, $user->identifiantC);
+            if(!$checkUserNote) {
+                $note->insertNote($codeChanson, $user->identifiantC, $_POST['noteNumber']);
+                $success = "Votre note à été transmis";
+            } else { $errorUser = "Vous avez déja noter cette chanson : " . $_POST['titreC'] . ".<br> Vous avez mis : " . Note::$getUserNote . " / 5 ."; }
+        } else { $error = "Nombre compris entre 0 et 5"; }
+    } else { $error = "Vous devez rentré une note"; }
 }
 
 // Changer note //
@@ -38,18 +37,18 @@ $noteNew = false;
 $getUserNote = $note->userHaveNote($user->identifiantC);    // Récupére si l'utilisateur à déja noter une chanson
 $notes = $note->getUserHaveNote($user->identifiantC);       // Récupére les chansons ayant étaient noter par l'utilisateur
 if (isset($_POST['sendNewNote'])) {
-    $getNewNote = $note->noteBewteen0_5(sanitizeString($_POST['newNote']));
-    if($getNewNote){
-        if($note->getNewNote((int)$_POST['codeChanson'], $_POST['newNote'], $user->identifiantC)){
-            $noteNew = true;
-            $succesUpdate = "Votre note à était changer !";
-        } else {
-            $noteNew = false;
-            $errorUpdate = "Votre note n'as pas pu étre changer !";
-        }
-    } else {
-        $errorNew = "Nombre compris entre 0 et 5";
-    }
+    if (!empty($_POST['newNote'])) {
+        $getNewNote = $note->noteBewteen0_5(sanitizeString($_POST['newNote']));
+        if($getNewNote){
+            if($note->getNewNote((int)$_POST['codeChanson'], $_POST['newNote'], $user->identifiantC)){
+                $noteNew = true;
+                $succesUpdate = "Votre note à était changer !";
+            } else {
+                $noteNew = false;
+                $errorUpdate = "Votre note n'as pas pu étre changer !";
+            }
+        } else { $errorNew = "Nombre compris entre 0 et 5"; }
+    } else { $errorNew = "Vous devez rentré une nouvelle note"; }
 }
 
 // Afficher toutes les notes des utilisateur
@@ -137,7 +136,7 @@ $gets = $note->selectAllNote() ;
                                     <label for="chooseUpdateChanson">Choissisez : </label>
                                     <select name="codeChanson" value="<?php sanitizeString($_POST['codeChanson']) ?>">
                                         <?php foreach ($notes as $note): ?>
-                                            <option><strong><?= $note->codeChanson ?></strong> : <?= $note->titreC ?></option>
+                                            <option><strong><?= $note->codeChanson ?></strong> : <?= $note->titreC ?>, Noter : <?= $note->note?></option>
                                         <?php endforeach ?>
                                     </select>
                                 </div>

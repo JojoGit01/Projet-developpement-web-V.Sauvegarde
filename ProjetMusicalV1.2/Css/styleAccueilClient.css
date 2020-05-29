@@ -17,13 +17,14 @@ body,html{
     height: 250px;
 }
 #galerie{
-    margin-top: 115px;
     position: relative;
+    margin-left: 30px;
+    margin-top: 50px;
 }
 #galerie img{
     position: absolute;
     display: none;
-    width: 220px;
+    width: 250px;
     height: 300px;
 }
 #galerie .active{
@@ -35,35 +36,36 @@ body,html{
 /* body  CLient */
 .body-accueilMusical{
     width: 100%;
-    margin-top: -130px;
+    margin-top: 110px;
 }
+
 .presentation-accueilMusical .image-backgroundAccueil{
     height: 400px;
     background: no-repeat center center / cover url("../img/firstimg.jpg");
-    margin-bottom: 25px;
 }
 .presentation-accueilMusical .title-background{
+    position: relative;
+    top: -300px;
     text-align: center;
     color: red;
     text-decoration: underline;
-    font-size: 60px;
+    font-size: 80px;
 }
 .container-accueilMusical{
-    margin: 0;
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
-
+    margin-top: -120px;
 }
 .main-accueilMusical .aspect-accueilMusical{
     display: flex;
-    width: 800px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 .main-accueilMusical .aspect-accueilMusical img{
-    width: 100px;
+    width: 150px;
     float: left;
     padding-bottom: 20px;
     margin-right: 15px
@@ -74,6 +76,8 @@ body,html{
 .main-accueilMusical .aspect-accueilMusical p{
     margin-top: -25px;
     margin-right: 10px;
+    font-size: 25px
+
 }
 .download-sound{
     margin-right : 100px;
@@ -82,8 +86,8 @@ body,html{
     margin-top: 30px;
 }
 .separate{
-    border: 4px solid #000;
-    width: 400px;
+    border: 6px solid #000;
+    width: 500px;
 }
 
 .site-view{
@@ -94,6 +98,7 @@ body,html{
 }
 .see-information .search-information h3{
     margin-left: 50px;
+    font-size: 30px;
 }
 .see-information .search-information h3:before{
     content: "↪ ";
@@ -108,22 +113,6 @@ body,html{
     text-decoration: underline;
 }
 
-.site-message{
-    margin-top: 30px;
-    width: 600px;
-}
-.site-message .fieldset legend{
-    font-size: 30px
-}
-.site-message .fieldset .comment{
-    max-height: 200px;
-    max-width: 400px;
-    margin-left: 50px;
-}
-.site-message .fieldset input {
-    font-size: 25px;
-    margin-left: 50px;
-}
 .separate-main-aside{
     border: 2px solid #000;
     margin-left :20px;
@@ -131,8 +120,31 @@ body,html{
 }
 .aside-accueilMusical{
     width: auto;
-    margin-top : 20px;
 }
+.aside-accueilMusical .title-recherche {
+    font-size: 35px;
+    color : blue
+}
+.aside-accueilMusical .rechercheAAT{
+    line-height: 40px;
+}
+.aside-accueilMusical .rechercheAAT label {
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+}
+.aside-accueilMusical .rechercheAAT input, .aside-accueilMusical .rechercheAAT select{
+    border: 4px solid #000;
+    border-radius: 30px;
+    font-size: 25px;
+    text-align: center;
+    box-shadow: 3px 3px 3px; 
+    margin-bottom: 25px;
+    width: 300px;
+    cursor: pointer;
+}
+
+
 
 @media only screen and (max-width:1290px){
     .body-accueilMusical{
