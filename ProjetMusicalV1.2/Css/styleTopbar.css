@@ -47,3 +47,22 @@
         margin-top: 225px;
     }
 }
+@media only screen and (max-width:1143px){
+    .topbarClient{ height: 280px; }
+}
+@media only screen and (max-width:643px){
+    .topbarClient{ height: 380px; }
+}
+
+@media only screen and (max-width:450px){
+    .topbarClient{ height: 470px; }
+}
+@media only screen and (max-width:436px){
+    .topbarClient{ height: 560px; }
+}
+@media only screen and (max-width:350px) {
+    .topbarClient .topbarCLient-D a:last-child {
+        padding-left: 50px;
+        padding-right: 0;
+    }
+}

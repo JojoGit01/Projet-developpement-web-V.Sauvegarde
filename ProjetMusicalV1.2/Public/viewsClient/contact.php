@@ -35,7 +35,7 @@ if (isset($_POST['sendMessage'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="../../Js/footerInformation/information.js"></script>
-        <link rel="stylesheet" href="../../Css/styleFooter.css">
+        <!--<link rel="stylesheet" href="../../Css/styleFooter.css">-->
         <link rel="stylesheet" href="../../Css/styleContact.css">
         <title>Contacter nous</title>
     </head>
@@ -53,7 +53,7 @@ if (isset($_POST['sendMessage'])) {
             <main class="main-Conctact">
                 <form action="" method="post">
                     <fieldset class="fieldset-contact">
-                        <legend>Contactez nous</legend>
+                        <legend class="title-contact">Contactez nous</legend>
                         <div class="error_succes">
                             <?php if(strlen($message) < 10): ?>
                                 <?= $errorSmall ?>
@@ -75,8 +75,8 @@ if (isset($_POST['sendMessage'])) {
                             </select>
                         </div>
                         <div class="message">
-                            <label for="message">Votre message :</label>
-                            <textarea name="message" id="message" rows = "10" cols = "50"><?php sanitizeString($_POST['message'])?></textarea>
+                            <label for="message">Votre message </label>
+                            <textarea name="message" id="message" rows = "15" cols = "30" style="resize: none"><?php sanitizeString($_POST['message'])?></textarea>
                         </div>
                         <div class="buttonSend">
                             <input type="submit" name="sendMessage" id="sendMessage" value="Envoyez mon message">
@@ -85,6 +85,13 @@ if (isset($_POST['sendMessage'])) {
                 </form>
             </main>
         </div>
-        <?php require_once '../FooterUse/footer.php' ?>
+        <footer class="footer">
+        <nav>
+            <a href="/ProjetMusicalV1.2/Public/viewsClient/contact.php" title="Conctater nous">Contactez nous</a>
+            <a href="#" onclick="informationLegales()" title="Information légales">Information légales</a>
+            <a href="#" onclick="politiqueDeConfidentialiteMusical()" title="Politique de confidentialité Musical">Politique de confidentialité Musical</a>
+            <a href="#" onclick="informationCookie()" title="Information sur les cookies">Information sur les cookies</a>
+        </nav>
+    </footer>   
     </body>
     </html>

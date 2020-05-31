@@ -57,7 +57,7 @@ body,html{
 .main-inscription .fieldsetI legend{
     text-decoration: underline;
     font-size: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .main-inscription .fieldsetI label{
     display: block;
@@ -67,18 +67,13 @@ body,html{
 }
 .main-inscription .fieldsetI input{
     float: left;
+    width: 250px;
     padding: 15px;
-}
-.main-inscription .fieldsetI input[type=date]{
-    /*width: calc(800px / 3.265306122);*/
-    width: calc(800px / 4.55);
+    font-size: 22px;
 }
 .main-inscription .fieldsetI input[type=submit],
 .main-inscription .fieldsetI input[type=reset]{
     margin-top: 10px;
-}
-.main-inscription .fieldsetI input[type=reset]{
-    margin-left: 20px;
 }
 .main-inscription .fieldsetI input[type=submit]:hover,
 .main-inscription .fieldsetI input[type=reset]:hover{
@@ -135,17 +130,21 @@ body,html{
     }
     .body-inscription {
         margin-top: 180px;
-        width: 600px;
+        width: auto;
     }
-    .body-inscription label, .body-inscription input{
-        margin-left: 150px;
-    }
-    .main-inscription .fieldsetI label{
+    .main-inscription .fieldsetI{
         width: 400px;
+        margin: 0 auto;
     }
-    .buttonI{
+    .main-inscription .fieldsetI label {
+        padding-left: 0;
+        width: auto;
+    }
+    .main-inscription .fieldsetI input{
         width: 350px;
+        margin-bottom: 20px;
     }
+    
 }
 @media only screen and (max-width:680px){
     .topbar{
@@ -153,38 +152,9 @@ body,html{
     }
     .body-inscription {
         margin-top: 280px;
-        width: 500px;
-    }
-    .body-inscription label, .body-inscription input{
-        margin-left: 90px
-    }
-    .main-inscription .fieldsetI label{
-        width: 300px;
     }
 }
-@media only screen and (max-width:515px){
-    .body-inscription {
-        margin-right: 50%;
-        width: 286px;
-    }
-    .body-inscription .fieldsetI{
-        margin-left: 30px;
-    }
-    .body-inscription .fieldsetI label,.body-inscription .fieldsetI input{
-        margin-left: 0px;
-    }.body-inscription .fieldsetI label{
-        font-size: 20px;
-    }
-    .body-inscription .fieldsetI input[type=submit],
-    .body-inscription .fieldsetI input[type=reset]{
-        margin: 0 auto;
-    }.body-inscription .fieldsetI input[type=reset]{
-        margin-left: 17.5px;
-    }
-    .main-inscription .fieldsetI label{
-        width: 275px;
-    }
-}
+
 @media only screen and (max-width:462px){
     .topbar{
         height: 360px;
@@ -193,19 +163,20 @@ body,html{
         margin-top: 390px;
     }
 }
-@media only screen and (max-width:435px){
-    .body-I .body-inscription{
-        margin-left: -20px;
+@media only screen and (max-width:420px) {
+    .main-inscription .fieldsetI {
+        width: 270px;
+        padding: 10px 10px;
     }
-}
-@media only screen and (max-width:410px){
-    .body-inscription .main-inscription{
-        margin-left: -30px;
+    .main-inscription .fieldsetI input{
+        width: 250px;
     }
-}
-@media only screen and (max-width:340px){
-    .footer{
-        font-size: 13px;
+    .footer nav{
+        font-size: 14px;
+        padding: 0;
+    }
+    .footer nav a:first-child {
+        margin-top: 0;
     }
 }
 
@@ -213,3 +184,4 @@ body,html{
     margin-left: 50%;
     margin-right: 50%;
 */
+

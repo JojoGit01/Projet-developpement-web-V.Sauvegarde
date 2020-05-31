@@ -212,13 +212,14 @@ body,html{
 @media only screen and (max-width:1250px){
     .main-AccueilSite{
         width: 820px;
-        margin-left : 180px;
-        display: inline-block;
+        margin: 0 auto;
+        display: block;
         font-size: 40px;
     }
     .hr-separe{display: none;}
     .main-Site .h2-preSite{margin-right : 225px}
-    .aside-Accueil,.Pre-Site{margin-left : 200px;}
+    .aside-Accueil, .Pre-Site{margin-left : 200px;}
+    .aside-Accueil{ padding-left: 20px; }
 }
 @media only screen and (max-width:1075px){
     .topbar{
@@ -235,58 +236,60 @@ body,html{
         display: inline-block;
         white-space: nowrap;
     }
-    .main-AccueilSite{margin-left:75px;}
 }
-@media only screen and (max-width:925px){
+@media only screen and (max-width:871px){
+    .presentation-Projet{margin-top: 300px;}
     .topbar{
         height: 300px;
         background: grey;
     }
-    .presentation-Projet{margin-top: 300px;}
 }
-@media only screen and (max-width:800px){
-    .main-AccueilSite{
-        margin-left: 175px;
-        width: 400px;
-    }  
-    .main-AccueilSite .main-Site h2{
-        font-size: 26px;
-        margin-right: 25px;
+@media only screen and (max-width:840px){
+    .main-AccueilSite, .main-AccueilSite .main-Site{
+        width: auto;
+        margin-left: 0;
     }
-    .main-AccueilSite .main-Site,.main-AccueilSite .main-Site .img-presentation-Musical,.Pre-Site{width: 400px;}
-    .Pre-Site, .aside-Accueil{margin-left: 0;}
-    .aside-Accueil{margin-left: 10px;}
-    .main-Site .pFinMainSite{font-size: 18px;}
+    .Pre-Site, .aside-Accueil  {
+        width: 400px;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    .main-Site .h2-preSite {
+        margin-right: 0;
+    }
 }
-@media only screen and (max-width:670px){
-    .body-A .main-AccueilSite{margin-left: 125px;}  
+@media only screen and (max-width:480px) {
+    .presentation-Projet .text-P p {
+        font-size: 40px;
+    }
 }
-@media only screen and (max-width:570px){
-    .body-A .main-AccueilSite{margin-left: 70px;}  
-}
-@media only screen and (max-width:500px){
-    .body-A .main-AccueilSite{margin-left: 40px;}
-}
-@media only screen and (max-width:480px){
-    .body-A .main-AccueilSite{margin-left: 10px;}
+@media only screen and (max-width:463px){
+    .presentation-Projet{margin-top: 370px;}
     .topbar{height: 370px;}
-    .presentation-Projet{height: 550px;}
 }
-@media only screen and (max-width:460px){
-    .topbar{height: 460px;}
-    .body-A .presentation-Projet{padding: 1px;height: 600px;}
+@media only screen and (max-width:424px){
+    .presentation-Projet{
+        margin-top: 450px;
+        height: 450px;
+    }
+    .presentation-Projet h2 { font-size: 50px;}
+    .presentation-Projet p { font-size: 45px;}
+
+    .topbar{height: 450px;}
 }
-@media only screen and (max-width:410px){
-    .body-A {width: 286px;}
-    .body-A h2{font-size: 45px;}
-    .body-A p{font-size: 36px;}
-    .body-A .presentation-Projet{height: 450px;}
-    .body-A .main-AccueilSite{margin-left: 0px;}
-    .body-A .main-AccueilSite,.body-A .main-AccueilSite .main-Site,.body-A .main-AccueilSite .Pre-Site,.body-A .main-AccueilSite .aside-Accueil{width: 286px;}
-    .body-A .main-AccueilSite .Pre-Site ul{margin-right: 5px;}
-    .body-A .main-AccueilSite .Pre-Site .pFinMainSite{font-size: 13px;}
-    .body-A .main-AccueilSite .aside-Accueil h2{font-size: 30px;}
-    .body-A .main-AccueilSite .img-presentation-Musical{width: 286px;}
-    .body-A h2{font-size: 45px;}
+@media only screen and (max-width:420px){
+    .Pre-Site, .aside-Accueil  {
+        width: 286px;
+    }
+    .Pre-Site .h4-Question {
+        font-size: 22px;
+    }
+    .aside-Accueil h2 {
+        font-size: 30px;
+    }
+    .footer nav { 
+        padding-right: 0; 
+        padding-left: 0;
+    }
     .footer nav a{font-size: 14px;}
 }

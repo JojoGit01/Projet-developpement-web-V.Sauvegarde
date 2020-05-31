@@ -57,6 +57,7 @@ body,html {
 .note-chanson input[type="submit"], .noteUser input[type="submit"] {
     font-size: 30px;
     margin-left: 50%;
+    padding: 0;
 }
 .noteUser input[type="submit"]{
     margin-bottom: 30px;
@@ -68,7 +69,7 @@ body,html {
 
 .show-sep{
     margin-top: 50px;
-    width:800px;
+    width: 800px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -97,4 +98,40 @@ body,html {
 }
 .viewNote li {
     margin: 10px 0;
+}
+
+@media only screen and (max-width:817px) { .show-sep { width: auto; } }
+@media only screen and (max-width:710px) { .main-note .note-border { width: auto; } }
+@media only screen and (max-width:620px) { .main-note .note-border { margin-top: 350px; } }
+@media only screen and (max-width:547px) {  .show-sep .viewNote {  width: auto; } }
+@media only screen and (max-width: 532px) {
+    .show-sep .viewNote { 
+        width: 100%;
+        display: inline-block;
+    }
+    .viewNote img {
+        width: 120px;
+        height: 60px;
+    } 
+    .viewNote ul{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:450px) { .main-note .note-border{ margin-top: 450px; } }
+@media only screen and (max-width: 445px) {
+    .error{ width: auto;}
+    .note-chanson, .noteUser { width: auto;}
+    .note-chanson select, .note-chanson input, .noteUser select, .noteUser input, .note-chanson label, .noteUser label, .note-chanson input[type="submit"], .noteUser input[type="submit"] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .note-chanson input[type="submit"], .noteUser input[type="submit"] { margin-top: 20px; }
+}
+@media only screen and (max-width:415px) { .main-note .note-border{ margin-top: 550px; } }
+@media only screen and (max-width:360px) { .viewNote ul{ font-size: 16px; } }
+@media only screen and (max-width:330px)  {
+    .show-sep .noteAll-title {
+        font-size: 35px;
+    }
 }

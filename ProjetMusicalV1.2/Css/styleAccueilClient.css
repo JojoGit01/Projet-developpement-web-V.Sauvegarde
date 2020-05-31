@@ -75,9 +75,7 @@ body,html{
 }
 .main-accueilMusical .aspect-accueilMusical p{
     margin-top: -25px;
-    margin-right: 10px;
     font-size: 25px
-
 }
 .download-sound{
     margin-right : 100px;
@@ -149,5 +147,121 @@ body,html{
 @media only screen and (max-width:1290px){
     .body-accueilMusical{
         margin-top: 200px;
+    }
+    .container-accueilMusical {
+        display: block;
+        margin-right: auto;
+        width: 900px;
+    }
+    .separate{
+        width: 900px;
+    }
+    .main-accueilMusical .aspect-accueilMusical{
+        display: inline-flex;
+    }
+    .separate-main-aside {
+        border:none
+    }
+    .see-information {
+        margin-left: 20px;
+    }
+    .aside-accueilMusical {
+        width: 400px;
+        display: flex;
+        padding-left: 20px;
+    }
+    #galerie img {
+        margin-left : 50px;
+        margin-top: 20px
+    }
+}
+@media only screen and (max-width:1143px){
+    .body-accueilMusical { margin-top: 280px;}
+}
+@media only screen and (max-width:910px) {
+    .container-accueilMusical {
+        width: auto;
+    }
+    .separate{
+        width: auto;
+    }
+    .main-accueilMusical .aspect-accueilMusical {
+        display: grid;
+        width: 600px;
+    }
+}
+@media only screen and (max-width:665px) {
+    .aside-accueilMusical{
+        margin: 0 auto;
+        display: block;
+    }
+    #galerie img {
+        margin-left : 0;
+        margin-top: -25px
+    }
+}
+@media only screen and (max-width:643px) {
+    .body-accueilMusical { margin-top: 380px;}
+}
+@media only screen and (max-width:610px) {
+    .main-accueilMusical .aspect-accueilMusical {
+        width: 380px;
+    }
+    .download-sound {
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width:514px) {
+    .main-accueilMusical .aspect-accueilMusical {
+        margin-top: -250px;
+    }
+}
+@media only screen and (max-width:485px) {
+    .presentation-accueilMusical .title-background { 
+        font-size: 55px;
+        margin-bottom: 200px;
+    }
+}
+@media only screen and (max-width:450px) {
+    .body-accueilMusical { margin-top: 450px; }
+    .presentation-accueilMusical .title-background { 
+        font-size: 45px;
+    }
+}
+@media only screen and (max-width:436px) {
+    .body-accueilMusical { margin-top: 560px;}
+    .main-accueilMusical .aspect-accueilMusical, .aside-accueilMusical { width: 286px;}
+    .main-accueilMusical .aspect-accueilMusical img { margin-right: 150px;}
+}
+@media only screen and (max-width:380px) {
+    .download-sound, .pub-zap {
+        width: 286px;
+        margin-left: 3px;
+    }
+    .main-accueilMusical .aspect-accueilMusical img {
+        margin-bottom: -50px;
+        float: none;
+        width: 200px;
+        margin-right: 0;
+    }
+    .see-information h2 {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:365px) {
+    .aside-accueilMusical .rechercheAAT input, .aside-accueilMusical .rechercheAAT select {
+        width: 250px;
+    }
+    .aside-accueilMusical .rechercheAAT label {
+        font-size: 25px;
+    }
+    #galerie img {
+        width: 200px;
+        height: 250px;
+    }
+}
+@media only screen and (max-width:286px) {
+    .separate {
+        width: 286px
     }
 }

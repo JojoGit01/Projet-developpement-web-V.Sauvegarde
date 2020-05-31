@@ -61,15 +61,14 @@ body,html{
     font-size: 30px;
 }
 .body-Connexion .fieldset-C input{
+    width: 200px;
     float: left;
     padding: 15px;
+    font-size: 22px;
 }
 .main-Connexion .fieldset-C input[type=submit],
 .main-Connexion .fieldset-C input[type=reset]{
     margin-top: 10px;
-}
-.main-Connexion .fieldset-C input[type=reset]{
-    margin-left: 5px;
 }
 .main-Connexion .fieldset-C input[type=submit]:hover,
 .main-Connexion .fieldset-C input[type=reset]:hover{
@@ -83,6 +82,9 @@ body,html{
 }
 .main-Connexion .fieldset-C .error {
     color: red;
+    display: initial;
+    float: none;
+    line-height: 50px;
 }
 
 /* footer */
@@ -92,7 +94,7 @@ body,html{
     background: #050505;
 }
 .footer nav{
-    margin-top: 520px;
+    margin-top: 375px;
     padding: 15px;
     text-align: center;
 }
@@ -162,6 +164,7 @@ body,html{
         padding-left: 120px;
     }
     .body-Connexion .fieldset-C label{
+        padding-left: 0;
         width: 260px;
     }
 }

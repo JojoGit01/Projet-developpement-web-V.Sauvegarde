@@ -31,7 +31,13 @@
     }
 }
 @media only screen and (max-width:410px){
+    .footer nav{
+        padding: 0;
+    }
     .footer nav a{
         font-size: 14px;
+    }
+    .footer nav a:first-child {
+        margin-top: 10px;
     }
 }

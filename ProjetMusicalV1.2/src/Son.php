@@ -17,8 +17,8 @@ class Son {
     }
     //Récupére le son dans la base de données
     public function getSong($numSong) {
-        $codeChanson = "codeChanson";
-        return self::getDatas($codeChanson, $numSong);
+        $idT = "codeChanson";
+        return self::getDatas($idT, $numSong);
     }
     //Vérifier que les informations de la chanson écouté est bien disponible
     public function checkGet($listenSong, $getInfo) {
@@ -34,14 +34,14 @@ class Son {
 
     // Récupére l'album dans la base de données
     public function listenAlbum ($codeAlbum) {
-        $codeAlbum = "codeAlbum";
-        return self::getDatas($codeAlbum, $codeAlbum); 
+        $idT = "codeAlbum";
+        return self::getDatas($idT, $codeAlbum); 
     }
 
     //Récupérer le codeChanson à partir de l'artiste ou de l'album.
     public static function getData($nameJoinT, $numT, $data) {
         $pdo = App::getPDO();
-        $query = $pdo->prepare("SELECT codeChanson FROM chanson JOIN $nameJoinT ON chanson.$numT = $nameJoinT.$numT WHERE $nameJoinT.$numT = $data");
+        $query = $pdo->prepare("SELECT codeChanson FROM chanson JOIN $nameJoinT ON chanson.$numT = $nameJoinT.$numT WHERE $nameJoinT.$numT = '$data'");
         $query->execute();
         return (int)$query->fetch()->codeChanson;
     }
