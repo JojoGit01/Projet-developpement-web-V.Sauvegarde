@@ -43,7 +43,7 @@ $listenAlbums = $son->listenAlbum($getInfo->codeAlbum);
             <div class="body-son">
                 <main class="son">
                     <h1 class="title-son">Vous écouter : <?= $getInfo->titreC ?> de <?= $getInfo->auteurC ?></h1>
-                    <iframe width="700px" height="400px" src="<?=$getInfo->son?>"></iframe>  
+                    <iframe class="iframe-son" src="<?=$getInfo->son?>"></iframe>  
                 </main>
                 <aside class="aside-son">
                     <div class="albumSonGetting">

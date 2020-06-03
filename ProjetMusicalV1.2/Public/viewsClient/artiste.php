@@ -70,7 +70,8 @@ $pages = getArtiste::$pages;
                                     <td><?= $postArtiste->nomA ?></td>
                                     <td><?= $postArtiste->prenomA ?></td>
                                     <td><img src="<?= $postArtiste->urlPhoto ?>" alt="<?= $postArtiste->urlPhoto ?>" width="300px" height="auto"></td>
-                                    <td class="bio-cal"><?= $postArtiste->biographie ?></td>
+                                    <td>Voir la biographie</td>
+                                    <!--<td class="bio-cal"><?= $postArtiste->biographie ?></td>-->
                                     <td><a href="../ListenSon/son.php?listenSong=<?= Son::getChansonFromArtiste($postArtiste->numA) ?>"><img src="../../img/lectureAudio.png" alt="lecture audio" width="150px" height="auto"></a></td>
                                 </tr>
                                 <tr><td colspan = "6"><hr class="separate-posts"></td></tr>
