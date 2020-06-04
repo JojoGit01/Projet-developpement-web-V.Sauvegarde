@@ -1,3 +1,11 @@
+/*
+//===================================================
+// Name        : styleNote.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page note (note.php).
+//===================================================
+*/
 *{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -100,10 +108,26 @@ body,html {
     margin: 10px 0;
 }
 
-@media only screen and (max-width:817px) { .show-sep { width: auto; } }
-@media only screen and (max-width:710px) { .main-note .note-border { width: auto; } }
-@media only screen and (max-width:620px) { .main-note .note-border { margin-top: 350px; } }
-@media only screen and (max-width:547px) {  .show-sep .viewNote {  width: auto; } }
+@media only screen and (max-width:817px) { 
+    .show-sep { 
+        width: auto; 
+    } 
+}
+@media only screen and (max-width:710px) { 
+    .main-note .note-border { 
+        width: auto; 
+    } 
+}
+@media only screen and (max-width:620px) { 
+    .main-note .note-border { 
+        margin-top: 350px; 
+    } 
+}
+@media only screen and (max-width:547px) {  
+    .show-sep .viewNote {  
+        width: auto; 
+    } 
+}
 @media only screen and (max-width: 532px) {
     .show-sep .viewNote { 
         width: 100%;
@@ -117,19 +141,37 @@ body,html {
         font-size: 25px;
     }
 }
-@media only screen and (max-width:450px) { .main-note .note-border{ margin-top: 450px; } }
+@media only screen and (max-width:450px) { 
+    .main-note .note-border{ 
+        margin-top: 450px; 
+    } 
+}
 @media only screen and (max-width: 445px) {
-    .error{ width: auto;}
-    .note-chanson, .noteUser { width: auto;}
+    .error{ 
+        width: auto;
+    }
+    .note-chanson, .noteUser { 
+        width: auto;
+    }
     .note-chanson select, .note-chanson input, .noteUser select, .noteUser input, .note-chanson label, .noteUser label, .note-chanson input[type="submit"], .noteUser input[type="submit"] {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-    .note-chanson input[type="submit"], .noteUser input[type="submit"] { margin-top: 20px; }
+    .note-chanson input[type="submit"], .noteUser input[type="submit"] { 
+        margin-top: 20px; 
+    }
 }
-@media only screen and (max-width:415px) { .main-note .note-border{ margin-top: 550px; } }
-@media only screen and (max-width:360px) { .viewNote ul{ font-size: 16px; } }
+@media only screen and (max-width:415px) { 
+    .main-note .note-border{ 
+        margin-top: 550px; 
+    } 
+}
+@media only screen and (max-width:360px) { 
+    .viewNote ul{ 
+        font-size: 16px; 
+    } 
+}
 @media only screen and (max-width:330px)  {
     .show-sep .noteAll-title {
         font-size: 35px;

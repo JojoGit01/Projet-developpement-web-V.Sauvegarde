@@ -1,5 +1,10 @@
-<!-- Creator: Jonathan -->
 <?php
+//===================================================
+// Name        : accueilClient.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Page principale pour les clients qui sont connectées 
+//===================================================
 require_once '../useFunction/sanitizeString.php';
 require_once '../vendor/autoload.php';
 use App\App;

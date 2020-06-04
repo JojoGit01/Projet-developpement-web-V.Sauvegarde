@@ -1,5 +1,10 @@
 <?php
-//Creator : Jonathan
+//===================================================
+// Name        : Son.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Class qui permet de récupérer les son des artistes et les albums depuis la base de données.
+//===================================================
 namespace App;
 use PDO;
 class Son {
@@ -10,7 +15,7 @@ class Son {
     //Récupére toutes les données d'un son ou d'un album
     public static function getDatas ($idT, $numT) {
         $pdo = App::getPDO();
-        $query = $pdo->prepare("SELECT * FROM chanson WHERE $idT = $numT");
+        $query = $pdo->prepare("SELECT * FROM chanson WHERE $idT = '$numT'");
         $query->execute();
         $idT === "codeChanson" ? $getDatas = $query->fetch() : $getDatas = $query->fetchAll();
         return $getDatas;

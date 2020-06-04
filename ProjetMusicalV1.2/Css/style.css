@@ -1,3 +1,11 @@
+/*
+//===================================================
+// Name        : style.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page principal (index.php).
+//===================================================
+*/
 *{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -207,7 +215,9 @@ body,html{
     }
 }
 @media only screen and (max-width: 1500px){
-    .main-AccueilSite{margin-left: 40px;}
+    .main-AccueilSite{
+        margin-left: 40px;
+    }
 }
 @media only screen and (max-width:1250px){
     .main-AccueilSite{
@@ -216,10 +226,18 @@ body,html{
         display: block;
         font-size: 40px;
     }
-    .hr-separe{display: none;}
-    .main-Site .h2-preSite{margin-right : 225px}
-    .aside-Accueil, .Pre-Site{margin-left : 200px;}
-    .aside-Accueil{ padding-left: 20px; }
+    .hr-separe{
+        display: none;
+    }
+    .main-Site .h2-preSite{
+        margin-right : 225px
+    }
+    .aside-Accueil, .Pre-Site{
+        margin-left : 200px;
+    }
+    .aside-Accueil{
+        padding-left: 20px; 
+    }
 }
 @media only screen and (max-width:1075px){
     .topbar{
@@ -238,7 +256,9 @@ body,html{
     }
 }
 @media only screen and (max-width:871px){
-    .presentation-Projet{margin-top: 300px;}
+    .presentation-Projet{
+        margin-top: 300px;
+    }
     .topbar{
         height: 300px;
         background: grey;
@@ -264,18 +284,28 @@ body,html{
     }
 }
 @media only screen and (max-width:463px){
-    .presentation-Projet{margin-top: 370px;}
-    .topbar{height: 370px;}
+    .presentation-Projet{
+        margin-top: 370px;
+    }
+    .topbar{
+        height: 370px;
+    }
 }
 @media only screen and (max-width:424px){
     .presentation-Projet{
         margin-top: 450px;
         height: 450px;
     }
-    .presentation-Projet h2 { font-size: 50px;}
-    .presentation-Projet p { font-size: 45px;}
+    .presentation-Projet h2 { 
+        font-size: 50px;
+    }
+    .presentation-Projet p {
+        font-size: 45px;
+    }
 
-    .topbar{height: 450px;}
+    .topbar{
+        height: 450px;
+    }
 }
 @media only screen and (max-width:420px){
     .Pre-Site, .aside-Accueil  {
@@ -291,5 +321,7 @@ body,html{
         padding-right: 0; 
         padding-left: 0;
     }
-    .footer nav a{font-size: 14px;}
+    .footer nav a{
+        font-size: 14px;
+    }
 }

@@ -1,3 +1,11 @@
+/*
+//===================================================
+// Name        : styleContact.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page contact (contact.php).
+//===================================================
+*/
 body{
     font-size: 20px;
     font-weight: bold;
@@ -141,17 +149,27 @@ body{
     }
 }
 @media only screen and (max-width:622px){
-    .topbarClient { height: 280px; }
-    .body-Contact { margin-top: 300px; }
-    .footer nav{ padding: 0; }
+    .topbarClient { 
+        height: 280px; 
+    }
+    .body-Contact { 
+        margin-top: 300px; 
+    }
+    .footer nav{ 
+        padding: 0; 
+    }
     .footer nav a{
         padding-right: 0;
         padding-left: 0;
     }
 }
 @media only screen and (max-width:450px){
-    .footer nav a{ font-size: 14px; }
-    .footer nav a:first-child { margin-top: 10px; }
+    .footer nav a{ 
+        font-size: 14px; 
+    }
+    .footer nav a:first-child { 
+        margin-top: 10px; 
+    }
 }
 @media only screen and (max-width:440px){ 
     .fieldset-contact {

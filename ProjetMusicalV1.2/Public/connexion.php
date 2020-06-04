@@ -1,5 +1,10 @@
-<!-- Creator: Jonathan -->
 <?php
+//===================================================
+// Name        : connexion.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Cette page permet à un utilisateur de pouvoir se connecter.
+//===================================================
 require_once '../vendor/autoload.php';
 require_once '../useFunction/sanitizeString.php';
 use App\User;

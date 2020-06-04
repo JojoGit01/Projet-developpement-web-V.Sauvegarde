@@ -1,8 +1,10 @@
 <?php
-/*
-    - Creator : Jonathan
-    - Ce code permet de sanitize les données rentrées par l'utilisateur
-*/
+//===================================================
+// Name        : sanitizeString.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Ce code permet de sanitize les données rentrées par l'utilisateur.
+//===================================================
 // Sanitize les données //
 function sanitizeString($var)
 {

@@ -1,6 +1,10 @@
 <?php
-// Cette class permet de définir un utilsateur si il est connecté ou non connecté
-// Creator : Jonathan
+//===================================================
+// Name        : Album.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Cette class permet de définir un utilsateur si il est connecté ou non connecté .
+//===================================================
 namespace App;
 use PDO;
 class User{

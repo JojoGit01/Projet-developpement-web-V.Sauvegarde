@@ -1,5 +1,10 @@
 <?php
-//Creator : Jonathan
+//===================================================
+// Name        : Note.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Class qui permet à un utilisateur de noter,modifier et de visualiser les notes.
+//===================================================
 namespace App;
 use PDO;
 use App\App;

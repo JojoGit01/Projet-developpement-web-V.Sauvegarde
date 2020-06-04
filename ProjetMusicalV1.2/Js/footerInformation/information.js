@@ -1,5 +1,9 @@
-/* Code javascript permettant de faire une alert pour le footer */
-
+//===================================================
+// Name        : information.js
+// Author      : Jonathan
+// Version     : Final
+// Description : Code permettant de faire une alert pour que le 'footer' intéragis avec l'utilisateur.
+//===================================================
 function informationLegales () {
     alert("Propriétaire : Jojo .\nContenu principal : Musique .\nResponsable : Jojo .\nProgramation : Jojo .");
 }

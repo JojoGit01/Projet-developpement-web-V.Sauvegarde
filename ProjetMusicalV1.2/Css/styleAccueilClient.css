@@ -1,3 +1,11 @@
+/*
+//===================================================
+// Name        : styleAccueilClient.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page principal du client quand il est connecté (accueilClient.php).
+//===================================================
+*/
 *{
     box-sizing: border-box;
 }
@@ -176,7 +184,9 @@ body,html{
     }
 }
 @media only screen and (max-width:1143px){
-    .body-accueilMusical { margin-top: 280px;}
+    .body-accueilMusical { 
+        margin-top: 280px;
+    }
 }
 @media only screen and (max-width:910px) {
     .container-accueilMusical {
@@ -201,7 +211,9 @@ body,html{
     }
 }
 @media only screen and (max-width:643px) {
-    .body-accueilMusical { margin-top: 380px;}
+    .body-accueilMusical { 
+        margin-top: 380px;
+    }
 }
 @media only screen and (max-width:610px) {
     .main-accueilMusical .aspect-accueilMusical {
@@ -223,15 +235,23 @@ body,html{
     }
 }
 @media only screen and (max-width:450px) {
-    .body-accueilMusical { margin-top: 450px; }
+    .body-accueilMusical { 
+        margin-top: 450px; 
+    }
     .presentation-accueilMusical .title-background { 
         font-size: 45px;
     }
 }
 @media only screen and (max-width:436px) {
-    .body-accueilMusical { margin-top: 560px;}
-    .main-accueilMusical .aspect-accueilMusical, .aside-accueilMusical { width: 286px;}
-    .main-accueilMusical .aspect-accueilMusical img { margin-right: 150px;}
+    .body-accueilMusical { 
+        margin-top: 560px;
+    }
+    .main-accueilMusical .aspect-accueilMusical, .aside-accueilMusical { 
+        width: 286px;
+    }
+    .main-accueilMusical .aspect-accueilMusical img { 
+        margin-right: 150px;
+    }
 }
 @media only screen and (max-width:380px) {
     .download-sound, .pub-zap {

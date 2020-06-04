@@ -1,5 +1,10 @@
 <?php
-//Creator : Jonathan
+//===================================================
+// Name        : Inscription.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Class qui permet d'inscrire un utilisateur, de vérifier si il n'est pas déja enregistrée dans la base de données.
+//===================================================
 namespace App;
 use PDO;
 class Inscription{

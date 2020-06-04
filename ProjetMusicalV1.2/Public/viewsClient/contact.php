@@ -1,5 +1,10 @@
-<!-- Creator: Jonathan -->
 <?php
+//===================================================
+// Name        : contact.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Page qui permet à un utilisateur de contacter le propiétaire du site.
+//===================================================
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
 use App\App;

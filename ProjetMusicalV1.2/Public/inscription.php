@@ -1,5 +1,10 @@
-<!-- Creator: Jonathan -->
 <?php
+//===================================================
+// Name        : inscription.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Cette page permet à un utilisateur de s'inscrire sur le site.
+//===================================================
 require_once '../vendor/autoload.php';
 require_once '../useFunction/sanitizeString.php';
 use App\App;

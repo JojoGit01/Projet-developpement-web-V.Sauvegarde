@@ -1,7 +1,10 @@
 <?php
-//Creator : Jonathan
-// Fichier qui est un extend //
-// Fichier important pour afficher les albums/artiste/chanson //
+//===================================================
+// Name        : AllInformation.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Code important pour afficher les albums/artiste/chanson. Ce fichier est un extend.
+//===================================================
 namespace App;
 use PDO;
 class AllInformation{

@@ -1,4 +1,11 @@
-/* Style topbar only */
+/*
+//===================================================
+// Name        : styleTopbar.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la barre supérieure.
+//===================================================
+*/
 .topbarClient{
     height: 110px;
     position: fixed;
@@ -48,21 +55,37 @@
     }
 }
 @media only screen and (max-width:1143px){
-    .topbarClient{ height: 280px; }
-    .body-album, .body-artiste, .body-chanson , .main-note{ margin-top: 300px; }
+    .topbarClient{ 
+        height: 280px; 
+    }
+    .body-album, .body-artiste, .body-chanson , .main-note{ 
+        margin-top: 300px; 
+    }
 }
 @media only screen and (max-width:643px){
-    .topbarClient{ height: 380px; }
-    .body-album, .body-artiste, .body-chanson , .main-note{ margin-top: 400px; }
+    .topbarClient{ 
+        height: 380px; 
+    }
+    .body-album, .body-artiste, .body-chanson , .main-note{ 
+        margin-top: 400px; 
+    }
 }
 
 @media only screen and (max-width:450px){
-    .topbarClient{ height: 470px; }
-    .body-album, .body-artiste, .body-chanson, .main-note{ margin-top: 490px; }
+    .topbarClient{ 
+        height: 470px; 
+    }
+    .body-album, .body-artiste, .body-chanson, .main-note{ 
+        margin-top: 490px; 
+    }
 }
 @media only screen and (max-width:436px){
-    .topbarClient{ height: 560px; }
-    .body-album, .body-artiste, .body-chanson, .main-note{ margin-top: 580px; }
+    .topbarClient{ 
+        height: 560px; 
+    }
+    .body-album, .body-artiste, .body-chanson, .main-note{ 
+        margin-top: 580px; 
+    }
 }
 @media only screen and (max-width:350px) {
     .topbarClient .topbarCLient-D a:last-child {

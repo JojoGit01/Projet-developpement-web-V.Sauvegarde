@@ -1,5 +1,10 @@
 <?php
-//Creator : Jonathan
+//===================================================
+// Name        : App.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Class qui permet d'instancier simplement la PDO et de vérifier l'utilisateur.
+//===================================================
 namespace App;
 use PDO;
 class App {

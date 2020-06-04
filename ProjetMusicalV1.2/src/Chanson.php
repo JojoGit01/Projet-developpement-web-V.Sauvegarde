@@ -1,5 +1,9 @@
 <?php
-//Creator : Jonathan
+//===================================================
+// Name        : Chanson.php
+// Author      : Jonathan
+// Version     : Final
+//===================================================
 namespace App;
 use PDO;
 class Chanson extends AllInformation{

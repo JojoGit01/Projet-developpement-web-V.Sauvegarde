@@ -1,5 +1,10 @@
-<!-- Creator: Jonathan -->
 <?php
+//===================================================
+// Name        : note.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Page qui permet à un utilisateur de noter une chanson, de modifier sa note et de pouvoir voir les autres notes dés utilisateurs.
+//===================================================
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
 use App\Note;

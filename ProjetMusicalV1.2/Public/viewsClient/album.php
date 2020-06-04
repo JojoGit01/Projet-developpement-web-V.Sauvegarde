@@ -1,5 +1,10 @@
-<!-- Creator: Jonathan -->
 <?php
+//===================================================
+// Name        : album.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Page qui affichent tous les albums disponibles dans la base de données.
+//===================================================
 require_once '../../vendor/autoload.php';
 require_once '../../useFunction/sanitizeString.php';
 use App\App;

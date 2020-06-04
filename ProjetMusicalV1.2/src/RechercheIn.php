@@ -1,5 +1,10 @@
 <?php 
-//Creator : Jonathan
+//===================================================
+// Name        : RechercheIn.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Class qui permet à un utilisateur de regarder les données comme il le souhaite par ordre croissant, décroissant, par nom, etc.
+//===================================================
 namespace App;
 class RechercheIn {
     private const SORT_KEY = 'sort';

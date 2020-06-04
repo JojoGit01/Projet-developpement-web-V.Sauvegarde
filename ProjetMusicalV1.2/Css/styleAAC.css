@@ -1,3 +1,11 @@
+/*
+//===================================================
+// Name        : styleAAC.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design des pages artiste, album, chanson (artiste.php, album.php, chanson.php).
+//===================================================
+*/
 *{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -111,7 +119,9 @@ body,html {
     }
 }
 @media only screen and (max-width: 460px) {
-    .table-artiste .table th { border: 2.5px solid #000 }
+    .table-artiste .table th { 
+        border: 2.5px solid #000; 
+    }
     .table-artiste .table a, .table-artiste .table td{
         font-size: 8px;
     }
@@ -172,10 +182,18 @@ body,html {
     }
 }
 @media only screen and (max-width: 470px) {
-    .table-chanson .table { border-spacing: 0;}
-    .table-chanson .table a, .table-chanson .table td { font-size: 6px;}
-    .table-chanson .table th { border: 1px solid #000}
-    .table-chanson .table img { width: 20px;}
+    .table-chanson .table { 
+        border-spacing: 0;
+    }
+    .table-chanson .table a, .table-chanson .table td { 
+        font-size: 6px;
+    }
+    .table-chanson .table th { 
+        border: 1px solid #000;
+    }
+    .table-chanson .table img { 
+        width: 20px;
+    }
 }
 /* ---------------------------------------- */
 

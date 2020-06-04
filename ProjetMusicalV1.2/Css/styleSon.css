@@ -1,3 +1,11 @@
+/*
+//===================================================
+// Name        : styleSon.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page son (son.php).
+//===================================================
+*/
 *{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -52,7 +60,7 @@ body,html {
     width: 700px;
 }
 .son .title-son {
-    font-size: 35px;
+    font-size: 32px;
     color: lightseagreen;
     text-decoration: underline;
 }
@@ -63,7 +71,7 @@ body,html {
 .body-son .aside-son{
     margin-top: 86px;
     margin-left: 20px;
-    font-size: 22px;
+    font-size: 16px;
     border: 1px solid #000;
 
 }
@@ -71,4 +79,87 @@ body,html {
     font-size: 30px;
     margin-left: 10px;
     color: steelblue;
+}
+
+.aside-son ul {
+    border: 2px solid #000;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    list-style: none;
+}
+.aside-son ul a {
+    text-decoration: none;
+    color : #000;
+}
+.aside-son ul a:hover {
+    color : blue;
+}
+.aside-son .active::before {
+    content: "➥ ";
+    color :red
+}
+
+/* --- @media screen --- */
+@media only screen and (max-width: 1020px) {
+    .body-son {
+        width: auto;
+        display: block;
+        margin-top: 135px;
+    }
+    .son { 
+        width: auto;
+    }
+    .son .title-son {
+        margin-left: 20px
+    }
+    .son .iframe-son {
+        width: 100%;
+        height: 400px;
+    }
+    .body-son .aside-son {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 930px) {
+    .topbarClient{
+        position: absolute;
+        height: 200px;
+        background: grey;
+    }
+    .topbarClient nav {
+        float : none;
+        text-align: center;
+    }
+    .topbarClient nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .body-son { 
+        margin-top: 220px;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .topbarClient {
+        height: 280px;
+    }
+    .body-son { 
+        margin-top: 300px;
+    }
+}
+@media only screen and (max-width: 462px) {
+    .topbarClient {
+        height: 360px;
+    }
+    .body-son { 
+        margin-top: 380px;
+    }
+}
+@media only screen and (max-width:350px) {
+    .topbarClient .topbarCLient-D a:last-child {
+        padding-left: 50px;
+        padding-right: 0;
+    }
 }

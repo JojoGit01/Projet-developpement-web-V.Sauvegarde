@@ -1,5 +1,10 @@
 <?php
-    // Page footer utilisée par toutes les pages //
+//===================================================
+// Name        : footer.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Ce morceau de code en html permet de visualiser sur toutes les pages le pied de page.
+//===================================================
 ?>
     <footer class="footer">
         <nav>

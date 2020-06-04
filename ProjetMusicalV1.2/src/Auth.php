@@ -1,5 +1,9 @@
 <?php 
-//Creator : Jonathan
+//===================================================
+// Name        : Auth.php
+// Author      : Jonathan
+// Version     : Final
+//===================================================
 namespace App;
 use PDO;
 class Auth{

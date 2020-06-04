@@ -1,6 +1,10 @@
 <?php
-//Creator : Jonathan
-//Page principal
+//===================================================
+// Name        : index.php
+// Author      : Jonathan
+// Version     : Final
+// Description : Page principal du projet 
+//===================================================
 require_once 'vendor/autoload.php';
 use App\User;
 use App\App;
