@@ -1,0 +1,186 @@
+/*
+//===================================================
+// Name        : styleConnexion.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page connexion (connexion.php).
+//===================================================
+*/
+*{
+    box-sizing: border-box;
+}
+body,html{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.body-C{
+    background: no-repeat center center / cover url("../img/backI.jpg");
+    height: auto;
+}
+
+/* topbar */
+.topbar{
+    height: 110px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    font-size: 35px;
+    z-index: 5;
+}
+.topbar nav{
+    margin: 10px;
+}
+.topbar .topbar-D{
+    float:right;
+    margin-top: 25px;
+}
+.topbar .topbar-D a{
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 100px;
+}
+.topbar .topbar-D a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.body-Connexion{
+    margin-top: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+    background: #fff;
+}
+.body-Connexion .fieldset-C legend{
+    font-size: 45px;
+}
+.body-Connexion .fieldset-C label{
+    display: block;
+    float: left;
+    width: calc(600px - 50%);
+    padding: 20px;
+    font-size: 30px;
+}
+.body-Connexion .fieldset-C input{
+    width: 200px;
+    float: left;
+    padding: 15px;
+    font-size: 22px;
+}
+.main-Connexion .fieldset-C input[type=submit],
+.main-Connexion .fieldset-C input[type=reset]{
+    margin-top: 10px;
+}
+.main-Connexion .fieldset-C input[type=submit]:hover,
+.main-Connexion .fieldset-C input[type=reset]:hover{
+    opacity: 1.2;
+    transition: opacity 0.2s;
+    box-shadow: 8px 8px 8px #000;
+}
+.buttonC{
+    width: 200px;
+    float: left;
+}
+.main-Connexion .fieldset-C .error {
+    color: red;
+    display: initial;
+    float: none;
+    line-height: 50px;
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    bottom: 0;
+    background: #050505;
+}
+.footer nav{
+    margin-top: 375px;
+    padding: 15px;
+    text-align: center;
+}
+.footer nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: grey;
+    opacity: 0.6;
+}
+.footer nav a:hover{
+    color: grey;
+    opacity: 1;
+}
+@media only screen and (max-width:1000px){
+    .footer nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width:870px){
+    .topbar .topbar-D{
+        margin-top: -70px
+    }
+}
+@media only screen and (max-width: 780px){
+    .topbar{
+        height: 150px;
+        position: absolute;
+        background: grey;
+    }
+    .topbar nav {
+        float : none;
+        text-align: center;
+    }
+    .topbar nav a,.footer nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width: 725px){
+    .topbar .topbar-D .aPropos{
+        padding-left:0;
+        margin-left:50px;
+    }
+}
+@media only screen and (max-width: 675px){
+    .topbar .topbar-D .aPropos{
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 620px){
+    .body-Connexion{
+        width: 286px;
+        margin-top: 325px;
+    }
+    .topbar {
+        height: 250px;
+    }
+    .topbar .topbar-D .accueil{
+        padding-bottom: 50px;
+    }
+    .topbar .topbar-D .aPropos{
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 120px;
+    }
+    .body-Connexion .fieldset-C label{
+        padding-left: 0;
+        width: 260px;
+    }
+}
+@media only screen and (max-width: 350px){
+    .footer{
+        font-size: 13px;
+    }
+    .fieldset-C{
+        margin-left: -0.5px
+    }
+}

@@ -1,0 +1,195 @@
+/*
+//===================================================
+// Name        : styleInscription.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page inscription (inscription.php).
+//===================================================
+*/
+*{
+    box-sizing: border-box;
+}
+body,html{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+.body-I{
+    background: no-repeat center center / cover url("../img/backI.jpg");
+    height: auto;
+}
+/* topbar */
+.topbar{
+    height: 110px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: grey;
+    font-size: 25px;
+    z-index: 5;
+}
+.topbar nav{
+    margin: 10px;
+}
+.topbar .topbar-D{
+    float:right;
+    margin-top: 25px;
+}
+.topbar .topbar-D a{
+    color: #000;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 50px;
+}
+.topbar .topbar-D a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* body-inscription */
+.body-inscription{
+    margin-top: 120px;
+    width: 800px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+.main-inscription .fieldsetI{
+    background: #fff;
+
+}
+.main-inscription .fieldsetI legend{
+    text-decoration: underline;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.main-inscription .fieldsetI label{
+    display: block;
+    float: left;
+    width: calc(800px - 50%);
+    padding: 20px;
+}
+.main-inscription .fieldsetI input{
+    float: left;
+    width: 250px;
+    padding: 15px;
+    font-size: 22px;
+}
+.main-inscription .fieldsetI input[type=submit],
+.main-inscription .fieldsetI input[type=reset]{
+    margin-top: 10px;
+}
+.main-inscription .fieldsetI input[type=submit]:hover,
+.main-inscription .fieldsetI input[type=reset]:hover{
+    opacity: 1.2;
+    transition: opacity 0.2s;
+    box-shadow: 8px 8px 8px #000;
+}
+.buttonI{
+    width: 250px;
+    float: left;
+}
+.main-inscription .fieldsetI .error {
+    color: red;
+}
+
+/* footer */
+.footer{
+    width:100%;
+    background: #050505;
+}
+.footer nav{
+    margin-top: 200px;
+    padding: 15px;
+    text-align: center;
+}
+.footer nav a{
+    text-decoration: none;
+    padding: 20px;
+    color: grey;
+    opacity: 0.6;
+}
+.footer nav a:hover{
+    color: grey;
+    opacity: 1;
+}
+@media only screen and (max-width:1000px){
+    .topbar{
+        position: absolute;
+        background: grey;
+    }
+    .topbar nav {
+        float : none;
+        text-align: center;
+    }
+    .topbar nav a,.footer nav a{
+        margin-top: -40px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width:825px){
+    .topbar{
+        height: 175px;
+    }
+    .body-inscription {
+        margin-top: 180px;
+        width: auto;
+    }
+    .main-inscription .fieldsetI{
+        width: 400px;
+        margin: 0 auto;
+    }
+    .main-inscription .fieldsetI label {
+        padding-left: 0;
+        width: auto;
+    }
+    .main-inscription .fieldsetI input{
+        width: 350px;
+        margin-bottom: 20px;
+    }
+    
+}
+@media only screen and (max-width:680px){
+    .topbar{
+        height: 270px;
+    }
+    .body-inscription {
+        margin-top: 280px;
+    }
+}
+
+@media only screen and (max-width:462px){
+    .topbar{
+        height: 360px;
+    }
+    .body-inscription {
+        margin-top: 390px;
+    }
+}
+@media only screen and (max-width:420px) {
+    .main-inscription .fieldsetI {
+        width: 270px;
+        padding: 10px 10px;
+    }
+    .main-inscription .fieldsetI input{
+        width: 250px;
+    }
+    .footer nav{
+        font-size: 14px;
+        padding: 0;
+    }
+    .footer nav a:first-child {
+        margin-top: 0;
+    }
+}
+
+/* A savoir 
+    margin-left: 50%;
+    margin-right: 50%;
+*/
+

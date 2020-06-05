@@ -1,0 +1,111 @@
+/*
+//===================================================
+// Name        : styleBiographieArtiste.css
+// Author      : Jonathan
+// Version     : Final
+// Description : Design de la page biographie des artistes.
+//===================================================
+*/
+body,html{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: 0;
+    background: lightgrey;
+}
+
+.artisteBiographie {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 140px;
+    border: 5px solid #000;
+    background: wheat;
+}
+.artisteBiographie .bioArtisteH1 {
+    font-size: 45px;
+    color : red;
+    margin-left: 30px;
+}
+.artisteBiographie img {
+    margin: 0 auto;
+    display: grid;
+}
+.artisteBiographie .bioArtisteH2 {
+    margin-left: 30px;
+    font-size: 40px;
+    text-decoration: underline;
+}
+.artisteBiographie .paraBio {
+    font-size: 25px;
+    margin-left: 60px;
+    margin-top: -15px;
+    margin-right: 20px;
+}
+.artisteBiographie .buttonReturn {
+    border: 4px solid #000;
+    border-radius: 30px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 3px 3px 3px;
+    margin-bottom: 10px;
+    width: 300px;
+    margin-left: 60px;
+}
+.artisteBiographie .buttonReturn a {
+    text-decoration: none;
+    color : #000;
+}
+.artisteBiographie .buttonReturn a:hover {
+    color: #0000ff;
+}
+
+@media only screen and (max-width:1290px){
+    .artisteBiographie{
+        margin-top: 220px;
+    }
+}
+@media only screen and (max-width:1143px){
+    .artisteBiographie{ 
+        margin-top: 300px; 
+    }
+}
+@media only screen and (max-width:643px){
+    .artisteBiographie{ 
+        margin-top: 400px; 
+    }
+}
+@media only screen and (max-width:630px) {
+    .artisteBiographie {
+        width: auto;
+    }
+}
+@media only screen and (max-width:450px){
+    .artisteBiographie{ 
+        margin-top: 490px; 
+    }
+}
+@media only screen and (max-width:436px){
+    .artisteBiographie{ 
+        margin-top: 580px; 
+    }
+    .artisteBiographie .buttonReturn {
+        width: 250px;
+        margin-left: 15px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .artisteBiographie .bioArtisteH1 {
+        font-size: 35px;
+        margin-left: 15px;
+    }
+    .artisteBiographie img {
+        width: 250px;
+    }
+    .artisteBiographie .bioArtisteH2 {
+        margin-left: 15px;
+    }
+    .artisteBiographie .paraBio {
+        margin-left: 30px;
+        font-size: 14px;
+    }
+}
