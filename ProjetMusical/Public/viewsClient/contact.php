@@ -42,7 +42,7 @@ if (isset($_POST['sendMessage'])) {
         <script type="text/javascript" src="../../Js/footerInformation/information.js"></script>
         <!--<link rel="stylesheet" href="../../Css/styleFooter.css">-->
         <link rel="stylesheet" href="../../Css/styleContact.css">
-        <title>Contacter nous</title>
+        <title>Contactez-nous</title>
     </head>
     <body>
         <header class="topbarClient">
@@ -58,7 +58,7 @@ if (isset($_POST['sendMessage'])) {
             <main class="main-Conctact">
                 <form action="" method="post">
                     <fieldset class="fieldset-contact">
-                        <legend class="title-contact">Contactez nous</legend>
+                        <legend class="title-contact">Contactez-nous</legend>
                         <div class="error_succes">
                             <?php if(strlen($message) < 10): ?>
                                 <?= $errorSmall ?>

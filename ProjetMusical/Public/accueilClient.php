@@ -87,11 +87,11 @@ if (isset($_POST['sendRecherche'])) {
                     <hr class="separate">
                     <div class="site-view">
                         <div class="see-information">
-                            <h2>Chercher vous quelque chose de spéciale</h2>
+                            <h2>Cherchez-vous quelque chose de spécial</h2>
                             <div class="search-information">
                                 <h3><a href="viewsClient/artiste.php" title="artiste">Visualiser les artistes</a></h3>
                                 <h3><a href="viewsClient/chanson.php" title="chanson">Visualiser des chansons</a></h3>
-                                <h3><a href="viewsClient/album.php" title="album">Visualiser quelque album</a></h3>
+                                <h3><a href="viewsClient/album.php" title="album">Visualiser quelques albums</a></h3>
                                 <h3><a href="viewsClient/note.php" title="noter">Noter une chanson</a></h3>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ if (isset($_POST['sendRecherche'])) {
                                 <h2 class="title-recherche">Faire une recherche</h2>
                                 <div class="rechercheAAT">
                                     <div class="recherchePrecise">
-                                        <label><strong>Vous rechercher</strong></label>
+                                        <label><strong>Vous recherchez</strong></label>
                                         <select name="rechercherPar" value="<?php sanitizeString($_POST['rechercherPar']) ?>" required>
                                             <option>Artiste</option>
                                             <option>Album</option>

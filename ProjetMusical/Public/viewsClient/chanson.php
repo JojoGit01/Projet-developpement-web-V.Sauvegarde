@@ -64,7 +64,7 @@ $pages = getChanson::$pages;
                                 <th><?= RechercheIn::sort('titreC', 'Titre', $_GET) ?></th>
                                 <th><?= RechercheIn::sort('duree', 'Durée', $_GET) ?></th>
                                 <th><?= RechercheIn::sort('auteurC', 'Auteur', $_GET) ?></th>
-                                <th><?= RechercheIn::sort('noteOpinionC', 'Note d\' opinion', $_GET) ?></th>
+                                <th><?= RechercheIn::sort('noteOpinionC', 'Note d\'opinion', $_GET) ?></th>
                                 <th><?= RechercheIn::sort('numA', 'Numéro Artiste', $_GET) ?></th>
                                 <th><?= RechercheIn::sort('codeAlbum', 'Code Album', $_GET) ?></th>
                             </tr>
@@ -90,7 +90,7 @@ $pages = getChanson::$pages;
                 <div class="paps">
                     <div class="pa">
                         <?php if ($pages > 1 && $page > 1): ?>
-                            <a href="?<?= RechercheIn::withParam($_GET, "p", $page-1) ?>">Page précéente</a>
+                            <a href="?<?= RechercheIn::withParam($_GET, "p", $page-1) ?>">Page précédente</a>
                         <?php endif ?>
                     </div>
                     <div class="ps">

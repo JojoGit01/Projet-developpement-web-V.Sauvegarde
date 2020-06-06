@@ -46,6 +46,7 @@ if(isset($_POST['ValiderI'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="../Js/footerInformation/information.js"></script>
+        <script type="text/javascript" src="../Js/dom-helper/inscription-helper.js"></script>
         <link rel="stylesheet" href="../Css/styleInscription.css">
         <title>Inscription Musical</title>
     </head>
@@ -73,8 +74,8 @@ if(isset($_POST['ValiderI'])) {
                             <input type="text" name="nameI" placeholder="Entrez nom" required>
                         </div>
                         <div class="prenomI">
-                            <label for="prenomI">Prenom :</label>
-                            <input type="text" name="prenomI" placeholder="Entrez prenom" required>
+                            <label for="prenomI">Prénom :</label>
+                            <input type="text" name="prenomI" placeholder="Entrez prénom" required>
                         </div>
                         <div class="dateDeNaissanceI">
                             <label for="dateDeNaissanceI">Date de naissance :</label>
@@ -90,13 +91,14 @@ if(isset($_POST['ValiderI'])) {
                         </div>
                         <div class="motDePasseI">
                             <label for="motDePasseI">Mot de passe :</label>
-                            <input type="password" name="passwordI" placeholder="Votre mot de passe" required>
+                            <input type="password" name="passwordI" id="passwordI" placeholder="Votre mot de passe" required>
                         </div>
-                        <div class="verificationMotDePasseI">
+                        <div id="inscription_helper">
+                            <h4 class="h4_inscription_helper">Conseils pour votre mot de passe</h4>
                             <ul>
-                                <li>Minimum 8 caractéres</li>
-                                <li>Une lettre et un chiffre</li>
-                                <li>Caractéres spéciaux</li>
+                                <li class="neutral" id="caractere_minimum">Utiliser 8 caractéres minimum.</li>
+                                <li class="neutral" id="chiffre_lettre">Utiliser au moins un chiffre et une lettre.</li>
+                                <li class="neutral" id="caractere_speciaux">Utiliser des caractéres spéciaux.</li>
                             </ul>
                         </div>
                         <div class="buttonI">

@@ -59,11 +59,12 @@ class Note{
         self::updateNoteInChanson($codeChanson);
     }
 
+
     //Function qui permet de faire un changement de la note d'opinion d'une chanson à partir de la note obtenu et des notes auparavant obtenu.
     //Par défaut la note d'opinion = 5, donc celle-ci sera tenu en compte pour le calcul de la note d'opinion.
+    const DEFAULT_NOTE = 5;
+    const DEFAULT_NOTE_COUNT = 1;
     public static function updateNoteInChanson ($codeChanson) {
-        $defaultNote = 5;
-        $defaultNoteCount = 1;
         $noteCountC = App::getPDO()->prepare("SELECT COUNT(note) as noteCount FROM noter WHERE codeChanson = '$codeChanson'");
         $sumNoteN = App::getPDO()->prepare("SELECT SUM(note) as sumNote FROM noter WHERE codeChanson = '$codeChanson'") ;
         $noteCountC->execute();
@@ -71,7 +72,7 @@ class Note{
         $getNoteCountC = (int)$noteCountC->fetch()->noteCount;
         $getSumNoteN = (float)$sumNoteN->fetch()->sumNote;
         //Calcul de la nouvelle note
-        $updateNote = ( round( (($getSumNoteN + $defaultNote) / ($getNoteCountC + $defaultNoteCount)), 2 ) );
+        $updateNote = ( round( (($getSumNoteN + self::DEFAULT_NOTE) / ($getNoteCountC + self::DEFAULT_NOTE_COUNT)), 2 ) );
         //Update la nouvelle note pour la note d'opinion d'une chanson
         $updateNoteOpinionC = App::getPDO()->prepare("UPDATE chanson JOIN noter ON chanson.codeChanson=noter.codeChanson SET chanson.noteOpinionC = '$updateNote' WHERE chanson.codeChanson = '$codeChanson'");
         $updateNoteOpinionC->execute();     

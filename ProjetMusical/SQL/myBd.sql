@@ -1,4 +1,10 @@
-/* My Base */
+/*
+//===================================================
+// Name        : myBd.sql
+// Author      : Jonathan
+// Version     : Final
+//===================================================
+*/
 
 CREATE DATABASES ProjetMusical;
 

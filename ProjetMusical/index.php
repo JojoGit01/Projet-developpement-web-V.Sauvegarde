@@ -50,17 +50,17 @@ if(User::checkIfUserCo(App::getAuth())) {
                     <div class="img-presentation-Musical"></div>
                     <div class="Pre-Site">
                         <h2 class="h2-preSite">Musical</h2>
-                        <h4 class="h4-Question">Qu'est ce que Musical ?</h4>
+                        <h4 class="h4-Question">Qu'est-ce-que Musical ?</h4>
                         <div class="presentation-Musical">
                             <ul>
                                 <li>Un environnement de musique </li>
-                                <li>Découverte d'album</li>
-                                <li>Musique illimiter</li>
-                                <li>Rechercher ce que vous voulez</li>
-                                <li>Et bien sur gratuit</li>
+                                <li>Découverte d'albums</li>
+                                <li>Musique illimitée</li>
+                                <li>Recherchez ce que vous voulez</li>
+                                <li>Et bien sûr gratuit</li>
                             </ul>
                         </div>
-                        <p class="pFinMainSite"><a href="Public/inscription.php">Inscriver vous</a> pour accéder au contenu </p>
+                        <p class="pFinMainSite"><a href="Public/inscription.php">Inscrivez-vous</a> pour accéder au contenu </p>
                     </div>
                 </div>
                 <hr class="hr-separe">
@@ -74,7 +74,7 @@ if(User::checkIfUserCo(App::getAuth())) {
                             <li><a href="#" title="Noter un album">Noter un album</a></li>
                         </ul>
                     </div>
-                    <p><a href="Public/inscription.php">Inscriver vous</a> ou <a href="Public/connexion.php">Connecter vous</a></p>
+                    <p><a href="Public/inscription.php">Inscrivez-vous</a> ou <a href="Public/connexion.php">Connectez-vous</a></p>
                 </aside>
             </main> 
         </div>

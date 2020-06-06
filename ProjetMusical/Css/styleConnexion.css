@@ -85,8 +85,13 @@ body,html{
     box-shadow: 8px 8px 8px #000;
 }
 .buttonC{
-    width: 200px;
+    width: 500px;
     float: left;
+}
+.buttonC input[type=submit], .buttonC input[type=reset] {
+    width: 500px;
+    margin-left: 20px;
+    font-size: 30px;
 }
 .main-Connexion .fieldset-C .error {
     color: red;
@@ -174,6 +179,16 @@ body,html{
     .body-Connexion .fieldset-C label{
         padding-left: 0;
         width: 260px;
+    }
+    .body-Connexion .fieldset-C input{
+        width: 260px;
+    }
+    .buttonC{
+        width: auto;
+    }
+    .buttonC input[type=submit], .buttonC input[type=reset] {
+        width: 260px;
+        margin-left: 0;
     }
 }
 @media only screen and (max-width: 350px){
